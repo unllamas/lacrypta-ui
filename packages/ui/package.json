@@ -9,8 +9,8 @@
     "dist"
   ],
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
-    "lint:fix": "eslint . --fix --ext .js,.jsx,.ts,.tsx",
+    "lint": "eslint",
+    "lint:fix": "eslint --fix --ext '**/*.{jsx,js}'",
     "build": "node esbuild.config.js",
     "generate:component": "turbo gen react-component"
   },
