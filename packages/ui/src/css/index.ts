@@ -37,6 +37,7 @@ const GlobalStyles = createGlobalStyle`
   h5, 
   h6 {
     font-family: ${(props) => props.theme.font.primary};
+    font-weight: bold;
   }
 
   p,
