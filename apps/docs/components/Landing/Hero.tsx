@@ -12,8 +12,7 @@ export const Hero = () => {
           </Heading>
           <Divider y={8} />
           <Text align='center'>
-            Potencia tus proyectos con lacrypta-ui: biblioteca de React con componentes elegantes y personalizables para
-            interfaces de usuario impresionantes.
+            Biblioteca de React con componentes elegantes y personalizables para interfaces de usuario impresionantes.
           </Text>
           <Divider y={12} />
           <Link href='/docs'>
