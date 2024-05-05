@@ -4,12 +4,12 @@ import { HeadingPrimitiveProps } from './types';
 
 export const HeadingBox = styled.div`
   h1 {
-    font-size: 1.6rem;
-    line-height: 1.7rem;
+    font-size: 2rem;
+    line-height: 2.1rem;
 
     @media (min-width: 800px) {
-      font-size: 2.1rem;
-      line-height: 2.2rem;
+      font-size: 3.1rem;
+      line-height: 3.2rem;
     }
   }
 
