@@ -19,31 +19,6 @@ export const Hero = () => {
           <Link href='/docs'>
             <Button>Empezar ahora</Button>
           </Link>
-
-          <Divider y={24} />
-
-          <Flex>
-            <Card variant='filled' spacing={4}>
-              <Flex direction='column'>
-                <Heading as='h3'>Lorem ipsum dolor sit.</Heading>
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eos quas fugiat dolorem nemo totam!
-                  Earum dignissimos vel rem, pariatur beatae odit ipsum corrupti eius nostrum eos sed, accusantium
-                  quisquam.
-                </Text>
-              </Flex>
-            </Card>
-            <Card variant='outline' spacing={4}>
-              <Flex direction='column'>
-                <Heading as='h3'>Lorem ipsum dolor sit.</Heading>
-                <Text>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque eos quas fugiat dolorem nemo totam!
-                  Earum dignissimos vel rem, pariatur beatae odit ipsum corrupti eius nostrum eos sed, accusantium
-                  quisquam.
-                </Text>
-              </Flex>
-            </Card>
-          </Flex>
         </Flex>
         <Divider y={80} />
       </Container>
