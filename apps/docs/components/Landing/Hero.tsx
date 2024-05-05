@@ -2,17 +2,18 @@ import Link from 'next/link';
 import { Button, Container, Heading, Flex, Divider, Card, Text } from '@unllamas/lacrypta-ui';
 
 export const Hero = () => {
+  const title = 'Crea sitios web hermosos con Next.js';
+
   return (
     <>
       <Container size='md'>
         <Divider y={80} />
-        <Flex align='center' direction='column' gap={'sm'}>
-          <Heading align='center'>
-            ¡Potencia tus Proyectos con <strong>lacrypta-ui</strong> para React!
-          </Heading>
+        <Flex direction='column' gap={'sm'}>
+          <Heading>{title.toLocaleUpperCase()}</Heading>
           <Divider y={8} />
-          <Text align='center'>
-            Biblioteca de React con componentes elegantes y personalizables para interfaces de usuario impresionantes.
+          <Text>
+            Un marco de generación de sitios simple,
+            <br /> potente y flexible con todo lo que amas de Next.js.
           </Text>
           <Divider y={12} />
           <Link href='/docs'>
