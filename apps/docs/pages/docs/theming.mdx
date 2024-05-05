@@ -1,0 +1,102 @@
+import { Steps } from 'nextra/components'
+
+# Theming
+
+### Qué es esto?
+
+La personalización de temas es un elemento clave en el diseño de interfaces de usuario (UI). Permite aplicar una estética consistente en toda tu aplicación, mejorando la experiencia del usuario y manteniendo la uniformidad visual.
+
+En `@unllamas/lacrypta-ui`, facilitamos la personalización fácil y flexible de temas. Este complemento te permite personalizar esquemas de colores, configuraciones de diseño y más, en diferentes componentes de tu aplicación.
+
+```ts
+interface ThemeProps {
+  colors: {
+    // General
+    black: string;
+    white: string;
+    // Brand
+    primary: ColorType;
+    secondary: ColorType;
+    // Grays
+    gray: ColorType;
+    // Status
+    success: ColorType;
+    warning: ColorType;
+    error: ColorType;
+    // Change by theme light or dark
+    background: string;
+    text: string;
+  };
+}
+```
+
+Cada categoria de colores tiene internamente un subconjunto de valores que definen la luminosidad de dicho color, siendo el valor `400` usado como background en los `Button` component.
+
+```ts
+interface ColorType {
+  100: string;
+  200: string;
+  300: string;
+  400: string;
+  500: string;
+  600: string;
+  700: string;
+  800: string;
+  900: string;
+  1000?: string;
+}
+```
+
+## Configuración
+<Steps>
+### Creación de archivos
+
+Adentro de una carpeta `config` en el root del proyecto crearemos los siguientes archivos:
+
+```json copy filename="config/theme.json"
+{
+  "colors": {
+    "primary": {
+      "100": "#E6F3FE",
+      "200": "#B5DAFD",
+      "300": "#84C2FB",
+      "400": "#52A9F9",
+      "500": "#2191F7",
+      "600": "#0877DE",
+      "700": "#065DAD",
+      "800": "#03284A",
+      "900": "#010D19"
+    }
+  }
+}
+```
+
+```js copy filename="config/theme.js"
+// 1. Import `createTheme` from 
+import { createTheme } from '@unllamas/lacrypta-ui';
+
+// 2. Import our `theme.json`
+import theme from './theme.json';
+
+// 3. Generate a new theme
+export const appTheme = createTheme(theme);
+```
+
+### Configurando nuestro provider
+
+Una vez configurado nuestro `appTheme` solo debemos integrarlo al `AppProvider.js` anteriormente creado:
+
+``` js copy {6, 10} filename="context/AppProvider.js"
+'use client';
+
+import { NextProvider } from '@unllamas/lacrypta-ui';
+
+// 1. Import our `appTheme`
+import { appTheme } from '../config/theme';
+
+export function AppProvider({ children }) {
+  // 2. Configure the `theme` with our `appTheme`
+  return <NextProvider theme={appTheme}>{children}</NextProvider>;
+}
+```
+</Steps>

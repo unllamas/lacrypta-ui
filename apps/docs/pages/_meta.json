@@ -1,0 +1,22 @@
+{
+  "index": {
+    "type": "page",
+    "title": "by @unllamas",
+    "display": "hidden",
+    "theme": {
+      "layout": "raw"
+    }
+  },
+  "docs": {
+    "type": "page",
+    "title": "Empezar"
+  },
+  "-- Components": {
+    "type": "separator",
+    "title": "Components"
+  },
+  "button": "Button",
+  "flex": "Flex",
+  "heading": "Heading",
+  "text": "Text"
+}

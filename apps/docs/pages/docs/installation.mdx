@@ -1,0 +1,80 @@
+import { Callout, Steps } from 'nextra/components'
+
+# Como empezar
+
+Recomendamos el uso de las siguientes herramientas:
+
+- [React 18.x](https://react.dev/)
+- [NextJS 14.x](https://nextjs.org/)
+- [Styled-components 6.x](https://styled-components.com/)
+
+<Callout type="warning">La documentación esta bajo modificaciones constantes.</Callout>
+
+## Instalacion manual
+
+<Steps>
+### Instalar package
+
+Para instalar `@unllamas/lacrypta-ui`, ejecuta uno de los siguientes comandos en tu terminal:
+
+```sh copy npm2yarn
+npm i @unllamas/lacrypta-ui
+```
+
+### Configurando proveedor
+
+Es esencial agregar `NextProvider` en la raíz de su aplicación. Para ello crearemos una carpeta `context` en el root del proyecto y generaremos el siguiente archivo: 
+
+```js copy filename="context/AppProvider.tsx"
+'use client';
+
+import { NextProvider } from '@unllamas/lacrypta-ui';
+
+export function AppProvider({ children }) {
+  return <NextProvider>{children}</NextProvider>;
+}
+```
+
+Configurado nuestro Provider, pasaremos a usarlo en su `layout` principal
+
+```js copy {2,9} filename="app/layout.tsx"
+// 1. Import `AppProvider` component
+import { AppProvider } from '../context/AppProvider';
+
+export function App({ children }) {
+  // 2. Wrap `AppProvider` at the root of your app
+  return (
+    <html lang='en'>
+      <body>
+        <AppProvider>{children}</AppProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### Use un componente
+
+Ahora, usted puede usar el componente que has instalado en tu aplicación.
+
+```js copy {4, 10} filename="app/page.tsx"
+'use client';
+
+// 1. Import `Button` componente 
+import { Button } from '@unllamas/lacrypta-ui';
+
+export function Page() {
+  // 2. Use `Button` how to <button></button>
+  return (
+    <main>
+      <Button>Click me!</Button>
+    </main>
+  );
+}
+```
+
+### Listo para la acción!
+
+Ahora, puedes ejecutar el comando `next` o `next dev` especificado en `package.json` para comenzar a desarrollar el proyecto!
+
+</Steps>

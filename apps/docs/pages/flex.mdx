@@ -1,0 +1,125 @@
+import { Callout } from 'nextra/components'
+import { Card, Button, Flex, Text, Container, Heading } from '@unllamas/lacrypta-ui'
+
+# Flex
+
+Flex is a layout component used to group elements together and apply a space between them.
+
+## Import 
+
+```js
+import { Flex } from '@unllamas/lacrypta-ui'
+```
+
+## Usage
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Flex>
+      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+      <Button>Button</Button>
+    </Flex>
+  </Container>
+</Card>
+
+```js
+<Flex>
+  <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+  <Button>Button</Button>
+</Flex>
+```
+
+### Flex Gap
+
+The gap property receives `xs`, `sm` or `md` as a value
+
+<Callout type="warning">Los valores `0`, `2`, `4`, `8` y `16` serán deprecados.</Callout>
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Flex gap='md'>
+      <Text isBold>Lorem:</Text>
+      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</Text>
+    </Flex>
+  </Container>
+</Card>
+
+```js
+<Flex gap='md'>
+  <Text isBold>Lorem:</Text>
+  <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</Text>
+</Flex>
+```
+
+### Flex Direction
+
+The direction property receives `row` or `column` as a value
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Flex gap='md' direction='column' >
+      <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+      <Button>Button</Button>
+    </Flex>
+  </Container>
+</Card>
+
+```js
+<Flex gap='md' direction='column'>
+  <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</Text>
+  <Button>Button</Button>
+</Flex>
+```
+
+### Flex Align
+
+The align property receives `start`, `end` or `center`
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Flex gap='md' direction='column' align='center'>
+      <Text align='center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</Text>
+      <Button>Button</Button>
+    </Flex>
+  </Container>
+</Card>
+
+```js
+<Flex gap='md' direction='column' align='center'>
+  <Text align='center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et.</Text>
+  <Button>Button</Button>
+</Flex>
+```
+
+### Flex Justify
+
+The justify property receives `start`, `end`, `center` or `space-between`
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Flex gap='md' justify='center'>
+      <Button>Button</Button>
+      <Button>Button</Button>
+    </Flex>
+  </Container>
+</Card>
+
+```js
+<Flex gap='md' justify='center'>
+  <Button>Button</Button>
+  <Button>Button</Button>
+</Flex>
+```
+
+
+

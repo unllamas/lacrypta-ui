@@ -1,0 +1,74 @@
+import { Callout } from 'nextra/components'
+import { Heading, Card, Text, Button, Container, Divider } from '@unllamas/lacrypta-ui'
+
+# Heading
+Heading is used to render semantic HTML heading elements.
+
+## Import
+
+```js
+import { Heading } from '@unllamas/lacrypta-ui'
+```
+
+## Usage
+
+Heading composes Box so you can use all the style props and add responsive styles as well. It renders an `<h2>` tag by default.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Heading>I'm a Heading</Heading>
+</Card>
+
+```js
+<Heading>I'm a Heading</Heading>
+```
+
+### Changing visual size
+
+<Callout type="error">Falta implementar</Callout>
+
+To increase the visual size of the heading, use the `size` props. This property ensures that the heading size automatically adjusts for smaller screens.
+
+<Callout type="warning">Corregir `line-hegiht`</Callout>
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Heading as='h1' size='4xl'>(4xl) In love with React & Next</Heading>
+  <Heading as='h2' size='3xl'>(3xl) In love with React & Next</Heading>
+  <Heading as='h3' size='2xl'>(2xl) In love with React & Next</Heading>
+  <Heading as='h4' size='xl'>(xl) In love with React & Next</Heading>
+  <Heading as='h5' size='md'>(md) In love with React & Next</Heading>
+  <Heading as='h6' size='sm'>(sm) In love with React & Next</Heading>
+</Card>
+
+```js
+<Heading as='h1' size='4xl'>(4xl) In love with React & Next</Heading>
+<Heading as='h2' size='3xl'>(3xl) In love with React & Next</Heading>
+<Heading as='h3' size='2xl'>(2xl) In love with React & Next</Heading>
+<Heading as='h4' size='xl'>(xl) In love with React & Next</Heading>
+<Heading as='h5' size='md'>(md) In love with React & Next</Heading>
+<Heading as='h6' size='sm'>(sm) In love with React & Next</Heading>
+```
+
+### Composition
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Container size='sm'>
+    <Heading align='center'>Online payments for Argentina</Heading>
+    <Divider y={4} />
+    <Text align='center'>Paystack helps businesses in Argentina get paid by anyone, anywhere in the world</Text>
+    <Divider y={12} />
+    <Button>Create a free account</Button>
+  </Container>
+</Card>
+
+```js
+<Heading align='center'>Online payments for Argentina</Heading>
+<Divider y={4} />
+<Text align='center'>Paystack helps businesses in Argentina get paid by anyone, anywhere in the world</Text>
+<Divider y={12} />
+<Button>Create a free account</Button>
+```

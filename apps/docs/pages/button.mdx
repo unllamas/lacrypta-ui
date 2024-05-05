@@ -1,0 +1,135 @@
+import { Callout } from 'nextra/components'
+import { Card, Button, Flex } from '@unllamas/lacrypta-ui'
+
+# Button
+
+Button component is used to trigger an action or event, such as submitting a form, opening a Dialog, canceling an action, or performing a delete operation.
+
+## Import
+
+```js
+import { Button } from '@unllamas/lacrypta-ui'
+```
+
+## Usage
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <div>
+    <Button>Button</Button>
+  </div>
+</Card>
+
+```js
+<Button>Button</Button>
+```
+
+### Button Sizes
+
+Use the size prop to change the `size` of the button. You can set the value to `xs`, `sm` or `md`.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Flex gap='sm' align='center'>
+    <Button size='md'>Button</Button>
+    <Button size='sm'>Button</Button>
+    <Button size='xs'>Button</Button>
+  </Flex>
+</Card>
+
+```js
+<Button size='md'>Button</Button>
+<Button size='sm'>Button</Button>
+<Button size='xs'>Button</Button>
+```
+
+### Button Variants
+
+Use the `variant` prop to change the visual style of the Button. You can set the value to `filled`, `bezeled`, `bezeledGray` or `borderless`.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Flex gap='sm' align='center'>
+    <Button variant='filled'>Button</Button>
+    <Button variant='bezeled'>Button</Button>
+    <Button variant='bezeledGray'>Button</Button>
+    <Button variant='borderless'>Button</Button>
+  </Flex>
+</Card>
+
+```js
+<Button variant='filled'>Button</Button>
+<Button variant='bezeled'>Button</Button>
+<Button variant='bezeledGray'>Button</Button>
+<Button variant='borderless'>Button</Button>
+```
+
+### Button Colors
+
+<Callout type="warning">Falta definir color `warning`</Callout>
+
+Use the colorScheme prop to change the color scheme of the Button. You can set the value of the color scales from your design system, like `primary`, `secondary`, `success`, `warning` or `error`.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Flex gap='sm' align='center'>
+    <Button color='primary'>Button</Button>
+    <Button color='secondary'>Button</Button>
+    <Button color='success'>Button</Button>
+    <Button color='warning'>Button</Button>
+    <Button color='error'>Button</Button>
+  </Flex>
+</Card>
+
+```js
+<Button color='primary'>Button</Button>
+<Button color='secondary'>Button</Button>
+<Button color='success'>Button</Button>
+<Button color='warning'>Button</Button>
+<Button color='error'>Button</Button>
+```
+
+### Button with icon
+
+<Callout type="error">Falta implementar</Callout>
+
+You can add left and right icons to the Button component using the `leftIcon` and `rightIcon` props respectively.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Flex gap='sm' align='center'>
+  
+  </Flex>
+</Card>
+
+```js
+```
+
+### Button loading state
+
+<Callout type="error">Falta implementar</Callout>
+
+Pass the `loading` prop to show its loading state. By default, the button will show a spinner and leave the button's width unchanged.
+
+You can also pass the `loadingText` prop to show a spinner and the loading text.
+
+<br />
+
+<Card variant='outline' spacing={4}>
+  <Flex gap='sm' align='center'>
+    <Button loading={true}>Button</Button>
+  </Flex>
+</Card>
+
+```js
+<Button loading={true}>Button</Button>
+```
+
+### Accessibility
+- [ ] Button has role of button.
+- [ ] When Button has focus, Space or Enter activates it.
