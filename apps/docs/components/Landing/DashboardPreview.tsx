@@ -11,6 +11,8 @@ import {
   Gear,
   Icon,
   Avatar,
+  Send,
+  Receive,
 } from '@unllamas/lacrypta-ui';
 
 import { appTheme } from '@/config/theme';
@@ -64,24 +66,27 @@ export const DashboardPreview = () => {
               BALANCE
             </Text>
             <Flex justify='center' align='center' gap='sm'>
-              <Text size='xs'>$</Text>
-              <Heading>895.78</Heading>
+              <Text size='sm'>$</Text>
+              <Flex justify='center' align='center' gap='xs' flex={0}>
+                <Heading>895</Heading>
+                <Text color={appTheme.colors.gray[500]}>.78</Text>
+              </Flex>
             </Flex>
           </Flex>
           <Divider y={12} />
           <Flex justify='center' gap='sm'>
             <div>
-              <Button variant='borderless' size='sm'>
+              <Button style={{ minWidth: '80px' }} variant='borderless' size='sm'>
                 SAT
               </Button>
             </div>
             <div>
-              <Button variant='bezeled' size='sm'>
+              <Button style={{ minWidth: '80px' }} variant='bezeled' size='sm'>
                 USD
               </Button>
             </div>
             <div>
-              <Button variant='borderless' size='sm'>
+              <Button style={{ minWidth: '80px' }} variant='borderless' size='sm'>
                 ARS
               </Button>
             </div>
@@ -91,13 +96,23 @@ export const DashboardPreview = () => {
       <Divider y={24} />
       <Container size='sm'>
         <Flex flex={1} justify='center' gap='sm'>
-          <Button>Depositar</Button>
-          <Button color='secondary'>Transferir</Button>
+          <Button>
+            <Icon size='md'>
+              <Receive />
+            </Icon>
+            Depositar
+          </Button>
+          <Button color='secondary'>
+            <Icon size='md'>
+              <Send />
+            </Icon>
+            Transferir
+          </Button>
         </Flex>
 
         <Divider y={24} />
 
-        <Flex justify='space-between'>
+        <Flex justify='space-between' align='center'>
           <Text size='sm' color={appTheme.colors.gray[500]}>
             Última actividad
           </Text>
