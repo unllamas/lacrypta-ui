@@ -3,7 +3,12 @@ import { useState, useEffect } from 'react';
 import { Flex, Button, Text } from '../index';
 import { ActionSheetProps } from './types';
 
-import { ActionSheetPrimitive, ActionSheetContent, ActionSheetWrapper, ActionSheetHeader } from './style';
+import {
+  ActionSheetPrimitive,
+  ActionSheetContent,
+  ActionSheetWrapper,
+  ActionSheetHeader,
+} from './style';
 
 export function ActionSheet(props: ActionSheetProps) {
   const { children, isOpen, onClose, title, description, cancelText } = props;

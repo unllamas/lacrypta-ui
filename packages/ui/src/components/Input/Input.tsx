@@ -59,7 +59,9 @@ export function Input(props: InputProps) {
       {(isLoading || isChecked || isError) && (
         <InputIcon>
           {isLoading && <Icon icon={<Loader />} />}
-          {isChecked && <Icon icon={<Check color={theme.colors.success[400]} />} />}
+          {isChecked && (
+            <Icon icon={<Check color={theme.colors.success[400]} />} />
+          )}
           {isError && <Icon icon={<Alert color={theme.colors.error[400]} />} />}
         </InputIcon>
       )}

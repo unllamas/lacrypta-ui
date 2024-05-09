@@ -4,7 +4,13 @@ import { useServerInsertedHTML } from 'next/navigation';
 import { ReactProvider } from './ReactProvider';
 import { ThemeProps, baseTheme } from '../theme';
 
-export function NextProvider({ children, theme = baseTheme }: { children: ReactNode; theme?: ThemeProps }) {
+export function NextProvider({
+  children,
+  theme = baseTheme,
+}: {
+  children: ReactNode;
+  theme?: ThemeProps;
+}) {
   // Only create stylesheet once with lazy initial state
   // x-ref: https://reactjs.org/docs/hooks-reference.html#lazy-initial-state
   const [styledComponentsStyleSheet] = useState(() => new ServerStyleSheet());
@@ -15,7 +21,10 @@ export function NextProvider({ children, theme = baseTheme }: { children: ReactN
     return <React.Fragment>{styles}</React.Fragment>;
   });
 
-  const sheet = typeof window === 'undefined' ? styledComponentsStyleSheet.instance : undefined;
+  const sheet =
+    typeof window === 'undefined'
+      ? styledComponentsStyleSheet.instance
+      : undefined;
 
   return (
     <ReactProvider theme={theme} sheet={sheet}>

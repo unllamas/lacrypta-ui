@@ -12,7 +12,13 @@ interface TextProps {
 }
 
 export function Text(props: TextProps): JSX.Element {
-  const { children, size = 'normal', align = 'left', isBold = false, color } = props;
+  const {
+    children,
+    size = 'normal',
+    align = 'left',
+    isBold = false,
+    color,
+  } = props;
 
   let textSize;
   let textHeight;
@@ -42,7 +48,13 @@ export function Text(props: TextProps): JSX.Element {
   }
 
   return (
-    <TextStyle $align={align} $color={color} $isBold={isBold} $size={textSize} $height={textHeight}>
+    <TextStyle
+      $align={align}
+      $color={color}
+      $isBold={isBold}
+      $size={textSize}
+      $height={textHeight}
+    >
       {children}
     </TextStyle>
   );

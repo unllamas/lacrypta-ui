@@ -28,9 +28,9 @@ export const avatarSizes: Story = {
   },
   render: (args) => (
     <Flex>
-      <Avatar size='xs' {...args} />
-      <Avatar size='sm' {...args} />
-      <Avatar size='md' {...args} />
+      <Avatar size="xs" {...args} />
+      <Avatar size="sm" {...args} />
+      <Avatar size="md" {...args} />
     </Flex>
   ),
 };

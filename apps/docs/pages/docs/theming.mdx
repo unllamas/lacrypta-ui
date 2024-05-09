@@ -1,4 +1,4 @@
-import { Steps } from 'nextra/components'
+import { Steps } from 'nextra/components';
 
 # Theming
 
@@ -46,6 +46,7 @@ interface ColorType {
 ```
 
 ## Configuración
+
 <Steps>
 ### Creación de archivos
 
@@ -70,7 +71,7 @@ Adentro de una carpeta `config` en el root del proyecto crearemos los siguientes
 ```
 
 ```js copy filename="config/theme.js"
-// 1. Import `createTheme` from 
+// 1. Import `createTheme` from
 import { createTheme } from '@unllamas/lacrypta-ui';
 
 // 2. Import our `theme.json`
@@ -84,7 +85,7 @@ export const appTheme = createTheme(theme);
 
 Una vez configurado nuestro `appTheme` solo debemos integrarlo al `AppProvider.js` anteriormente creado:
 
-``` js copy {6, 10} filename="context/AppProvider.js"
+```js copy {6, 10} filename="context/AppProvider.js"
 'use client';
 
 import { NextProvider } from '@unllamas/lacrypta-ui';
@@ -97,4 +98,5 @@ export function AppProvider({ children }) {
   return <NextProvider theme={appTheme}>{children}</NextProvider>;
 }
 ```
+
 </Steps>

@@ -14,9 +14,11 @@ export const SheetPrimitive = styled.div<SheetPrimitiveProps>`
   width: 100%;
   height: 100%;
 
-  background-color: ${(props) => (props.$isOpen ? props.theme.colors.background : 'transparent')};
+  background-color: ${(props) =>
+    props.$isOpen ? props.theme.colors.background : 'transparent'};
 
-  transform: ${(props) => (props.$isOpen ? 'translateY(0)' : 'translateY(100%)')};
+  transform: ${(props) =>
+    props.$isOpen ? 'translateY(0)' : 'translateY(100%)'};
   transition-duration: 0.2s;
   transform: ${(props) => (props.$isOpen ? 1 : 0)};
 `;
@@ -37,7 +39,8 @@ export const SheetContent = styled.div<SheetContentProps>`
   background-color: ${(props) => props.theme.colors.gray15};
   border-radius: 24px 24px 0 0;
 
-  transform: ${(props) => (props.$isOpen ? 'translateY(0)' : 'translateY(100%)')};
+  transform: ${(props) =>
+    props.$isOpen ? 'translateY(0)' : 'translateY(100%)'};
   transition-duration: 0.4s;
 `;
 export const SheetBody = styled.div`

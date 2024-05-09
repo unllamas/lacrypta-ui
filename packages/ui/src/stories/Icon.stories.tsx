@@ -26,9 +26,9 @@ export const sizeComponents: Story = {
   },
   render: (args) => (
     <Flex gap={4}>
-      <Icon size='xs' {...args} />
-      <Icon size='sm' {...args} />
-      <Icon size='md' {...args} />
+      <Icon size="xs" {...args} />
+      <Icon size="sm" {...args} />
+      <Icon size="md" {...args} />
     </Flex>
   ),
 };

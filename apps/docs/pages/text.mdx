@@ -1,5 +1,13 @@
-import { Callout } from 'nextra/components'
-import { Heading, Card, Text, Button, Container, Divider, Flex } from '@unllamas/lacrypta-ui'
+import { Callout } from 'nextra/components';
+import {
+  Heading,
+  Card,
+  Text,
+  Button,
+  Container,
+  Divider,
+  Flex,
+} from '@unllamas/lacrypta-ui';
 
 # Text
 
@@ -8,14 +16,14 @@ Text is the used to render text and paragraphs within an interface.
 ## Import
 
 ```js
-import { Text } from '@unllamas/lacrypta-ui'
+import { Text } from '@unllamas/lacrypta-ui';
 ```
 
 ## Usage
 
 <br />
 
-<Card variant='outline' spacing={4}>
+<Card variant="outline" spacing={4}>
   <Text>In love with React & Next</Text>
 </Card>
 
@@ -31,11 +39,11 @@ To increase the visual size of the heading, use the `size` props. This property 
 
 <br />
 
-<Card variant='outline' spacing={4}>
-  <Flex direction='column' gap={16}>
-    <Text size='md'>(md) In love with React & Next</Text>
-    <Text size='sm'>(sm) In love with React & Next</Text>
-    <Text size='xs'>(xs) In love with React & Next</Text>
+<Card variant="outline" spacing={4}>
+  <Flex direction="column" gap={16}>
+    <Text size="md">(md) In love with React & Next</Text>
+    <Text size="sm">(sm) In love with React & Next</Text>
+    <Text size="xs">(xs) In love with React & Next</Text>
   </Flex>
 </Card>
 
@@ -51,10 +59,10 @@ The align property receives `left`, `center` or `right` value
 
 <br />
 
-<Card variant='outline' spacing={4}>
-  <Text align='left'>In love with React & Next</Text>
-  <Text align='center'>In love with React & Next</Text>
-  <Text align='right'>In love with React & Next</Text>
+<Card variant="outline" spacing={4}>
+  <Text align="left">In love with React & Next</Text>
+  <Text align="center">In love with React & Next</Text>
+  <Text align="right">In love with React & Next</Text>
 </Card>
 
 ```js
@@ -69,12 +77,12 @@ The color property receives a hexadecimal color
 
 <br />
 
-<Card variant='outline' spacing={4}>
-  <Text color='yellow'>In love with React & Next</Text>
+<Card variant="outline" spacing={4}>
+  <Text color="yellow">In love with React & Next</Text>
 </Card>
 
 ```js
-<Text color='yellow'>In love with React & Next</Text>
+<Text color="yellow">In love with React & Next</Text>
 ```
 
 ### Override the element
@@ -85,22 +93,22 @@ To override the element that gets rendered, pass the as prop. Use Inspect Elemen
 
 <br />
 
-<Card variant='outline' spacing={4}>
-  <Flex direction='column' gap={16}>
+<Card variant="outline" spacing={4}>
+  <Flex direction="column" gap={16}>
     <Text isBold>Bold</Text>
-    <Text as='i'>Italic</Text>
-    <Text as='u'>Underline</Text>
-    <Text as='abbr'>I18N</Text>
-    <Text as='cite'>Citation</Text>
-    <Text as='del'>Deleted</Text>
-    <Text as='em'>Emphasis</Text>
-    <Text as='ins'>Inserted</Text>
-    <Text as='kbd'>Ctrl + C</Text>
-    <Text as='mark'>Highlighted</Text>
-    <Text as='s'>Strikethrough</Text>
-    <Text as='samp'>Sample</Text>
-    <Text as='sub'>sub</Text>
-    <Text as='sup'>sup</Text>
+    <Text as="i">Italic</Text>
+    <Text as="u">Underline</Text>
+    <Text as="abbr">I18N</Text>
+    <Text as="cite">Citation</Text>
+    <Text as="del">Deleted</Text>
+    <Text as="em">Emphasis</Text>
+    <Text as="ins">Inserted</Text>
+    <Text as="kbd">Ctrl + C</Text>
+    <Text as="mark">Highlighted</Text>
+    <Text as="s">Strikethrough</Text>
+    <Text as="samp">Sample</Text>
+    <Text as="sub">sub</Text>
+    <Text as="sup">sup</Text>
   </Flex>
 </Card>
 

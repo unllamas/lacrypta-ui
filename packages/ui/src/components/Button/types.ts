@@ -1,4 +1,9 @@
-import { ReactNode, CSSProperties, ButtonHTMLAttributes, ReactElement } from 'react';
+import {
+  ReactNode,
+  CSSProperties,
+  ButtonHTMLAttributes,
+  ReactElement,
+} from 'react';
 
 type Color = 'primary' | 'secondary' | 'error';
 type Variant = 'filled' | 'bezeled' | 'bezeledGray' | 'borderless';

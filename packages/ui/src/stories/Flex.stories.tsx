@@ -21,14 +21,16 @@ export const defaultComponent: Story = {
   render: (args) => (
     <Flex {...args}>
       <Text>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa similique eveniet quam! Consectetur, quis!
-        Labore eveniet, quod veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur nobis. Dignissimos,
-        eos doloremque.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        similique eveniet quam! Consectetur, quis! Labore eveniet, quod
+        veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur
+        nobis. Dignissimos, eos doloremque.
       </Text>
       <Text>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa similique eveniet quam! Consectetur, quis!
-        Labore eveniet, quod veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur nobis. Dignissimos,
-        eos doloremque.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        similique eveniet quam! Consectetur, quis! Labore eveniet, quod
+        veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur
+        nobis. Dignissimos, eos doloremque.
       </Text>
     </Flex>
   ),
@@ -41,9 +43,10 @@ export const columnDirection: Story = {
   render: (args) => (
     <Flex {...args}>
       <Text>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa similique eveniet quam! Consectetur, quis!
-        Labore eveniet, quod veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur nobis. Dignissimos,
-        eos doloremque.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        similique eveniet quam! Consectetur, quis! Labore eveniet, quod
+        veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur
+        nobis. Dignissimos, eos doloremque.
       </Text>
       <Button onClick={() => null}>+</Button>
     </Flex>
@@ -58,11 +61,13 @@ export const centerAlign: Story = {
   render: (args) => (
     <Flex {...args}>
       <Text>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa similique eveniet quam! Consectetur, quis!
-        Labore eveniet, quod veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur nobis. Dignissimos,
-        eos doloremque.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa similique eveniet quam!
-        Consectetur, quis! Labore eveniet, quod veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur
-        nobis. Dignissimos, eos doloremque.
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa
+        similique eveniet quam! Consectetur, quis! Labore eveniet, quod
+        veritatis quis, ipsam repudiandae ut cupiditate, ipsum saepe pariatur
+        nobis. Dignissimos, eos doloremque.Lorem, ipsum dolor sit amet
+        consectetur adipisicing elit. Culpa similique eveniet quam! Consectetur,
+        quis! Labore eveniet, quod veritatis quis, ipsam repudiandae ut
+        cupiditate, ipsum saepe pariatur nobis. Dignissimos, eos doloremque.
       </Text>
       <Button onClick={() => null}>+</Button>
     </Flex>
@@ -76,10 +81,10 @@ export const startJustify: Story = {
   },
   render: (args) => (
     <Flex {...args}>
-      <Button size='small' variant='bezeledGray' onClick={() => null}>
+      <Button size="small" variant="bezeledGray" onClick={() => null}>
         +
       </Button>
-      <Button size='small' onClick={() => null}>
+      <Button size="small" onClick={() => null}>
         +
       </Button>
     </Flex>
@@ -93,10 +98,10 @@ export const centerJustify: Story = {
   },
   render: (args) => (
     <Flex {...args}>
-      <Button size='small' variant='bezeledGray' onClick={() => null}>
+      <Button size="small" variant="bezeledGray" onClick={() => null}>
         +
       </Button>
-      <Button size='small' onClick={() => null}>
+      <Button size="small" onClick={() => null}>
         +
       </Button>
     </Flex>
@@ -110,10 +115,10 @@ export const endJustify: Story = {
   },
   render: (args) => (
     <Flex {...args}>
-      <Button size='small' variant='bezeledGray' onClick={() => null}>
+      <Button size="small" variant="bezeledGray" onClick={() => null}>
         +
       </Button>
-      <Button size='small' onClick={() => null}>
+      <Button size="small" onClick={() => null}>
         +
       </Button>
     </Flex>
@@ -127,10 +132,10 @@ export const spaceBetweenJustify: Story = {
   },
   render: (args) => (
     <Flex {...args}>
-      <Button size='small' variant='bezeledGray' onClick={() => null}>
+      <Button size="small" variant="bezeledGray" onClick={() => null}>
         +
       </Button>
-      <Button size='small' onClick={() => null}>
+      <Button size="small" onClick={() => null}>
         +
       </Button>
     </Flex>

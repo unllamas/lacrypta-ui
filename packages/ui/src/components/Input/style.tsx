@@ -20,8 +20,8 @@ export const InputPrimitive = styled.input<InputPrimitiveProps>`
       props.$showValidate
         ? props.theme.colors.gray[700]
         : props.$isSuccess
-        ? props.theme.colors.success[400]
-        : props.theme.colors.error[400]};
+          ? props.theme.colors.success[400]
+          : props.theme.colors.error[400]};
 
   color: ${(props) => props.theme.colors.text};
   font-size: 0.8em;
@@ -101,7 +101,8 @@ export const FeedbackPrimitive = styled.div<FeedbackPrimitiveProps>`
 
   margin-top: 4px;
 
-  color: ${(props) => (props.$isSuccess ? props.theme.colors.success : props.theme.colors.error)};
+  color: ${(props) =>
+    props.$isSuccess ? props.theme.colors.success : props.theme.colors.error};
 
   /* font-size: 0.7em; */
 `;
@@ -154,8 +155,8 @@ export const TextareaPrimitive = styled.textarea<InputPrimitiveProps>`
       props.$showValidate
         ? props.theme.colors.gray20
         : props.$isSuccess
-        ? props.theme.colors.success
-        : props.theme.colors.error};
+          ? props.theme.colors.success
+          : props.theme.colors.error};
 
   color: ${(props) => props.theme.colors.text};
   font-size: 0.8em;

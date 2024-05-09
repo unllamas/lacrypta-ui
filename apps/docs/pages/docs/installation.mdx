@@ -1,4 +1,4 @@
-import { Callout, Steps } from 'nextra/components'
+import { Callout, Steps } from 'nextra/components';
 
 # Como empezar
 
@@ -8,7 +8,9 @@ Recomendamos el uso de las siguientes herramientas:
 - [NextJS 14.x](https://nextjs.org/)
 - [Styled-components 6.x](https://styled-components.com/)
 
-<Callout type="warning">La documentación esta bajo modificaciones constantes.</Callout>
+<Callout type="warning">
+  La documentación esta bajo modificaciones constantes.
+</Callout>
 
 ## Instalacion manual
 
@@ -23,7 +25,7 @@ npm i @unllamas/lacrypta-ui
 
 ### Configurando proveedor
 
-Es esencial agregar `NextProvider` en la raíz de su aplicación. Para ello crearemos una carpeta `context` en el root del proyecto y generaremos el siguiente archivo: 
+Es esencial agregar `NextProvider` en la raíz de su aplicación. Para ello crearemos una carpeta `context` en el root del proyecto y generaremos el siguiente archivo:
 
 ```js copy filename="context/AppProvider.tsx"
 'use client';
@@ -44,7 +46,7 @@ import { AppProvider } from '../context/AppProvider';
 export function App({ children }) {
   // 2. Wrap `AppProvider` at the root of your app
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <AppProvider>{children}</AppProvider>
       </body>
@@ -60,7 +62,7 @@ Ahora, usted puede usar el componente que has instalado en tu aplicación.
 ```js copy {4, 10} filename="app/page.tsx"
 'use client';
 
-// 1. Import `Button` componente 
+// 1. Import `Button` componente
 import { Button } from '@unllamas/lacrypta-ui';
 
 export function Page() {

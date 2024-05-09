@@ -1,4 +1,4 @@
-import { Steps } from 'nextra/components'
+import { Steps } from 'nextra/components';
 
 # Tipografías
 
@@ -6,7 +6,6 @@ import { Steps } from 'nextra/components'
 - [Tipografias: formatos y cuáles usar]()
 
 El uso de tipografias en el ámbito web puede ser muchas veces un dolor de cabeza. Por ello, hemos decidido dividirlo en 2 grandes categorias:
-
 
 ### Heading
 
@@ -17,6 +16,7 @@ El componente [Heading](/heading) es la representación de las etiquetas `h1` ha
 El componente [Text](/text) es mas complejo porque no solo representa una etiqueta `p`, sino tambien un subconjunto de elementos como `button`, `input`, entre otros.
 
 ## Configuración
+
 <Steps>
 ### Carpeta `fonts`
 
@@ -34,31 +34,31 @@ Una vez añadidas nuestras tipografías de forma local, en la carpeta `fonts` cr
 
 ```css copy filename="fonts/main.css"
 @font-face {
-    font-family: 'Blatant';
-    src: url('./Blatant.woff') format('woff');
-    font-style: normal;
-    font-weight: 400;
+  font-family: 'Blatant';
+  src: url('./Blatant.woff') format('woff');
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Blatant';
-    src: url('./Blatant-Bold.woff') format('woff');
-    font-style: bold;
-    font-weight: 700;
+  font-family: 'Blatant';
+  src: url('./Blatant-Bold.woff') format('woff');
+  font-style: bold;
+  font-weight: 700;
 }
 
 @font-face {
-    font-family: 'Standerd';
-    src: url('./Standerd.woff2') format('woff2');
-    font-style: normal;
-    font-weight: 400;
+  font-family: 'Standerd';
+  src: url('./Standerd.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
 }
 
 @font-face {
-    font-family: 'Standerd';
-    src: url('./Standerd-Bold.woff2') format('woff2');
-    font-style: bold;
-    font-weight: 700;
+  font-family: 'Standerd';
+  src: url('./Standerd-Bold.woff2') format('woff2');
+  font-style: bold;
+  font-weight: 700;
 }
 ```
 
@@ -74,7 +74,7 @@ import '../fonts/main.css';
 
 export function App({ children }) {
   return (
-    <html lang='en'>
+    <html lang="en">
       <body>
         <AppProvider>{children}</AppProvider>
       </body>
@@ -85,7 +85,7 @@ export function App({ children }) {
 
 ### Configurando `font`
 
-Ya casi estamos listos! Solo nos queda el último paso y es configurar nuestro `theme`. 
+Ya casi estamos listos! Solo nos queda el último paso y es configurar nuestro `theme`.
 Para ello modificaremos el que anteriormente ya habíamos creado y lo configuraremos de la siguiente manera:
 
 ```json {5-8} copy filename="config/theme.json"
@@ -101,4 +101,5 @@ Para ello modificaremos el que anteriormente ya habíamos creado y lo configurar
 ```
 
 El valor de `primary` y `secondary` deberían cambiar dependiendo de las tipografías previamente cargadas.
+
 </Steps>
