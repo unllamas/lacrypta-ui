@@ -4,24 +4,23 @@ import { Button, Container, Heading, Flex, Divider, Card, Text } from '@unllamas
 export const Hero = () => {
   return (
     <>
-      <Container size='lg'>
+      <Container size='md'>
         <Divider y={80} />
-        <Flex direction='column' gap={'sm'} align='center'>
-          <Heading align='center'>
-            Crea sitios web <br />
-            hermosos con Next.js
-          </Heading>
-          <Divider y={8} />
+        <Heading align='center'>El design system que tu proyecto de Next esperaba</Heading>
+      </Container>
+      <Divider y={12} />
+      <Container size='sm'>
+        <Flex direction='column' align='center'>
           <Text align='center'>
-            Un marco de generación de sitios simple, <br /> potente y flexible con todo lo que amas de Next.js
+            Genera rápidamente aplicaciones web con nuestros componentes y layouts adaptados para la ocasion.
           </Text>
-          <Divider y={12} />
+          <Divider y={24} />
           <Link href='/docs'>
             <Button>Empezar ahora</Button>
           </Link>
         </Flex>
-        <Divider y={80} />
       </Container>
+      <Divider y={80} />
     </>
   );
 };
