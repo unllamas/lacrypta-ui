@@ -2,7 +2,6 @@ import { ThemeProps } from './types';
 
 export const baseTheme: ThemeProps = {
   colors: {
-    transparent: 'transparent',
     // Base
     black: '#000000',
     white: '#FFFFFF',
@@ -84,7 +83,7 @@ export const baseTheme: ThemeProps = {
     buttonRadius: '8px',
   },
   font: {
-    primary: 'Blatant',
-    secondary: 'Standerd',
+    primary: 'system-ui',
+    secondary: 'sans-serif',
   },
 };
