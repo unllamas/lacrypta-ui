@@ -7,12 +7,12 @@ const handleChangeSize = (size: string) => {
     case 'xs':
       return `height: 30px; padding: .6rem .2rem; font-size: .7rem;`;
     case 'sm':
-      return `height: 40px; padding: .6rem .4rem; font-size: .8rem;`;
+      return `height: 40px; padding: .6rem .5rem; font-size: .8rem;`;
     case 'md':
       return `height: 50px; padding: 0 .8rem; font-size: .8rem;`;
     // Deprecated small and normal
     case 'small':
-      return `height: 40px; padding: .6rem .4rem; font-size: .8rem;`;
+      return `height: 40px; padding: .6rem .5rem; font-size: .8rem;`;
     case 'normal':
       return `height: 50px; padding: 0 .8rem; font-size: .8rem;`;
   }
@@ -23,6 +23,8 @@ export const ButtonStyle = styled.button<BaseButtonProps>`
   align-items: center;
   justify-content: center;
   gap: 8px;
+  width: 100%;
+  max-width: 320px;
 
   border: none;
   border-radius: ${(props) => props.theme.borders.buttonRadius};
