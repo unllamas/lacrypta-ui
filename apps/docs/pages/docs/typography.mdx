@@ -1,0 +1,103 @@
+import { Steps } from 'nextra/components'
+
+# Tipografías
+
+El uso de tipografias en el ámbito web puede ser muchas veces un dolor de cabeza. Por ello, hemos decidido dividirlo en 2 grandes categorias:
+
+- [Cómo optimizar tipografias para web]()
+- [Tipografias: formatos y cuáles usar]()
+
+### Heading
+
+El componente [Heading](/heading) es la representación de las etiquetas `h1` hasta `h6`.
+
+### Text
+
+El componente [Text](/text) es mas complejo porque no solo representa una etiqueta `p`, sino tambien un subconjunto de elementos como `button`, `input`, entre otros.
+
+## Configuración
+<Steps>
+### Carpeta `fonts`
+
+Para un mejor manejo de la arquitectura de nuestro proyecto, en el root del mismo crearemos una carpeta llamada `fonts`.
+Adentro podremos cargar las tipografías a utilizar.
+
+**Algunas recomendaciones:**
+
+- Formato `.woff2`
+- Importar estilo `normal` y `bold`
+
+### Archivo `main.css`
+
+Una vez añadidas nuestras tipografías de forma local, en la carpeta `fonts` crearemos el siguiente archivo:
+
+```css copy filename="fonts/main.css"
+@font-face {
+    font-family: 'Blatant';
+    src: url('./Blatant.woff') format('woff');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Blatant';
+    src: url('./Blatant-Bold.woff') format('woff');
+    font-style: bold;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Standerd';
+    src: url('./Standerd.woff2') format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Standerd';
+    src: url('./Standerd-Bold.woff2') format('woff2');
+    font-style: bold;
+    font-weight: 700;
+}
+```
+
+### Importando nuestro `main.css`
+
+Configuradas nuestras tipografías y vinculadas con CSS nos toca añadirlas a nuestro `layout`:
+
+```js copy {4} filename="app/layout.tsx"
+import { AppProvider } from '../context/AppProvider';
+
+// 1. Import main.css
+import '../fonts/main.css';
+
+export function App({ children }) {
+  return (
+    <html lang='en'>
+      <body>
+        <AppProvider>{children}</AppProvider>
+      </body>
+    </html>
+  );
+}
+```
+
+### Configurando `font`
+
+Ya casi estamos listos! Solo nos queda el último paso y es configurar nuestro `theme`. 
+Para ello modificaremos el que anteriormente ya habíamos creado y lo configuraremos de la siguiente manera:
+
+```json {5-8} copy filename="config/theme.json"
+{
+  "colors": {
+    ...
+  },
+  "font": {
+    "primary": "Blatant",
+    "secondary": "Standerd"
+  }
+}
+```
+
+El valor de `primary` y `secondary` deberían cambiar dependiendo de las tipografías previamente cargadas.
+</Steps>
