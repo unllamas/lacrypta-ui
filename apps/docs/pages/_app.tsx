@@ -7,7 +7,7 @@ import '@/fonts/main.css';
 
 export default function Nextra({ Component, pageProps }: AppProps) {
   return (
-    <NextProvider>
+    <NextProvider theme={appTheme}>
       <Component {...pageProps} />
     </NextProvider>
   );
