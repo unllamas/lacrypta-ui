@@ -1,16 +1,11 @@
 import React from 'react';
 
+import { AvatarProps } from './Avatar.types';
+
 import { AvatarStyle } from './style';
 
-interface AvatarProps {
-  src: string;
-  alt: string;
-  // Deprecated normal and large
-  size: 'normal' | 'large' | 'xs' | 'sm' | 'md';
-}
-
-export function Avatar({ src = '', alt, size }: AvatarProps) {
-  let sizeValue: number;
+const Avatar = ({ src = '', alt = '', size }: AvatarProps) => {
+  let sizeValue: number = 0;
 
   switch (size) {
     case 'xs':
@@ -36,4 +31,6 @@ export function Avatar({ src = '', alt, size }: AvatarProps) {
       {!src ? alt.slice(0, 2).toLocaleUpperCase() : <img src={src} alt={alt} />}
     </AvatarStyle>
   );
-}
+};
+
+export default Avatar;
