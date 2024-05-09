@@ -31,5 +31,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "styled-components": "^6.1.6"
+  },
+  "exports": {
+    ".": "./dist/index.js"
   }
 }
