@@ -11,5 +11,9 @@
       "800": "#03284A",
       "900": "#010D19"
     }
+  },
+  "font": {
+    "primary": "Blatant",
+    "secondary": "Standerd"
   }
 }
