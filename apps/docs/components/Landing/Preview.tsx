@@ -3,6 +3,7 @@ import { appTheme } from '@/config/theme';
 const genericPreview = {
   overflow: 'hidden',
   width: '100%',
+  maxHeight: '668px',
   margin: '0 auto',
   padding: '24px',
   backgroundColor: appTheme.colors.background,
@@ -17,7 +18,7 @@ interface PreviewProps {
   screen: 'xs' | 'sm' | 'md';
 }
 
-export const Preview = ({ children, screen }: PreviewProps) => {
+export const Preview = ({ children, screen = 'md' }: PreviewProps) => {
   let device;
 
   switch (screen) {
