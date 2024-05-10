@@ -46,7 +46,7 @@ export const ButtonStyle = styled.button<BaseButtonProps>`
 
   &:disabled {
     background-color: transparent;
-    color: ${(props) => props.theme.colors.gray50};
+    color: ${(props) => props.theme.colors.gray[600]};
     cursor: not-allowed;
   }
 
