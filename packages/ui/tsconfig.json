@@ -1,15 +1,15 @@
 {
-  "extends": "@repo/typescript-config/react-library.json",
+  "extends": "@lacrypta/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "moduleResolution": "node",
-    "allowSyntheticDefaultImports": true,
-    "emitDeclarationOnly": true,
-    "baseUrl": "./src",
-    "paths": {
-      "@/*": ["./*"]
-    }
+    "baseUrl": "src"
+    // "rootDir": "./src"
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "dist"]
+  "exclude": [
+    "dist",
+    "node_modules",
+    "src/stories/*",
+    "src/**/*.test.tsx",
+    "src/**/*.stories.tsx"
+  ]
 }

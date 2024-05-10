@@ -7,8 +7,9 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md,mdx}\"",
     "build:ui": "pnpm --filter @unllamas/lacrypta-ui build",
-    "web:dev": "pnpm --filter @repo/web dev",
-    "doc:dev": "pnpm --filter @repo/docs dev"
+    "web:dev": "pnpm --filter @lacrypta/web dev",
+    "doc:dev": "pnpm --filter @lacrypta/docs dev",
+    "clean": "rm -rf ./node_modules && rm -rf ./turbo"
   },
   "devDependencies": {
     "@lawallet/typescript-config": "1.0.0",

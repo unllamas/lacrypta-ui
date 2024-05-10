@@ -168,7 +168,7 @@ export const DashboardPreview = () => {
         <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
-              <Avatar size="sm">
+              <Avatar alt="algo" size="sm">
                 <Icon size="sm" icon={<Send />} />
               </Avatar>
             </div>
