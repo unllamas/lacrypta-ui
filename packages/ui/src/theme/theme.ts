@@ -76,7 +76,7 @@ export const baseTheme: ThemeProps = {
       900: '#470000',
     },
     // General
-    background: '#000000',
+    background: '#101010',
     text: '#FFFFFF',
   },
   borders: {
