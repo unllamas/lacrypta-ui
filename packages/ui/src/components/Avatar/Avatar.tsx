@@ -1,10 +1,18 @@
-import React from 'react';
-
-import { AvatarProps } from './Avatar.types';
+import React, { FC } from 'react';
 
 import { AvatarStyle } from './style';
 
-const Avatar = ({ src = '', alt = '', size }: AvatarProps) => {
+interface AvatarProps {
+  src?: string;
+  alt: string;
+  // Deprecated normal and large
+  size: 'normal' | 'large' | 'xs' | 'sm' | 'md';
+  children?: React.ReactNode;
+}
+
+export const Avatar: FC<AvatarProps> = (props) => {
+  const { src, alt = '', size, children } = props;
+
   let sizeValue: number = 0;
 
   switch (size) {
@@ -28,9 +36,15 @@ const Avatar = ({ src = '', alt = '', size }: AvatarProps) => {
 
   return (
     <AvatarStyle $size={sizeValue}>
-      {!src ? alt.slice(0, 2).toLocaleUpperCase() : <img src={src} alt={alt} />}
+      {!children ? (
+        !src ? (
+          alt.slice(0, 2).toLocaleUpperCase()
+        ) : (
+          <img src={src} alt={alt} />
+        )
+      ) : (
+        children
+      )}
     </AvatarStyle>
   );
 };
-
-export default Avatar;

@@ -11,7 +11,7 @@ export * from './Input/Feedback';
 export * from './Input/InputGroup';
 export * from './Input/InputGroupRight';
 export * from './Input/Textarea';
-export { default as Avatar } from './Avatar';
+export { Avatar } from './Avatar';
 // export * from './Avatar/AvatarImage';
 export * from './Sheet';
 export { Icon } from './Icon';
