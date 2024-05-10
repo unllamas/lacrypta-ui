@@ -1,11 +1,9 @@
-import Link from 'next/link';
 import {
   Button,
   Container,
   Heading,
   Flex,
   Divider,
-  Card,
   Text,
   Visible,
   Gear,
@@ -17,25 +15,15 @@ import {
 
 import { appTheme } from '@/config/theme';
 
-const style = {
-  overflow: 'hidden',
-  minHeight: '300px',
-  width: '100%',
-  maxWidth: '1024px',
-  margin: '0 auto',
-  backgroundColor: 'rgba(255,255,255,.02)',
-  borderRadius: '24px 24px 0 0',
-};
-
 export const DashboardPreview = () => {
   return (
-    <div style={style}>
+    <>
       <Divider y={40} />
       <Container>
         <Flex justify="space-between">
           <Flex gap="sm" align="center">
             <Flex flex={0}>
-              <Avatar alt="DI" size="sm" />
+              <Avatar alt="GO" size="sm" />
             </Flex>
             <Flex direction="column" gap={0}>
               <Text size="sm" color={appTheme.colors.gray[500]}>
@@ -46,14 +34,10 @@ export const DashboardPreview = () => {
           </Flex>
           <Flex gap="xs" flex={0}>
             <Button variant="bezeled" size="sm">
-              <Icon size="md">
-                <Visible />
-              </Icon>
+              <Icon size="md" icon={<Visible />} />
             </Button>
             <Button variant="bezeled" size="sm">
-              <Icon size="md">
-                <Gear />
-              </Icon>
+              <Icon size="md" icon={<Gear />} />
             </Button>
           </Flex>
         </Flex>
@@ -85,7 +69,11 @@ export const DashboardPreview = () => {
               </Button>
             </div>
             <div>
-              <Button style={{ minWidth: '80px' }} variant="bezeled" size="sm">
+              <Button
+                style={{ minWidth: '80px' }}
+                variant="bezeledGray"
+                size="sm"
+              >
                 USD
               </Button>
             </div>
@@ -105,15 +93,11 @@ export const DashboardPreview = () => {
       <Container size="sm">
         <Flex flex={1} justify="center" gap="sm">
           <Button>
-            <Icon size="md">
-              <Receive />
-            </Icon>
+            <Icon size="md" icon={<Receive />} />
             Depositar
           </Button>
           <Button color="secondary">
-            <Icon size="md">
-              <Send />
-            </Icon>
+            <Icon size="md" icon={<Send />} />
             Transferir
           </Button>
         </Flex>
@@ -134,7 +118,7 @@ export const DashboardPreview = () => {
         {/* tx */}
         <Divider y={12} />
         <Flex justify="space-between">
-          <Flex gap="sm" align="center ">
+          <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm" alt="GO" />
             </div>
@@ -158,7 +142,7 @@ export const DashboardPreview = () => {
         {/* tx */}
         <Divider y={12} />
         <Flex justify="space-between">
-          <Flex gap="sm" align="center ">
+          <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm" alt="CU" />
             </div>
@@ -168,7 +152,7 @@ export const DashboardPreview = () => {
                 <Text color={appTheme.colors.gray[700]} size="xs">
                   •
                 </Text>
-                <Text color={appTheme.colors.gray[500]}>10s</Text>
+                <Text color={appTheme.colors.gray[500]}>10m</Text>
               </Flex>
               <Text color={appTheme.colors.gray[500]}>
                 desde cuervo@lacrypta.ar
@@ -179,7 +163,79 @@ export const DashboardPreview = () => {
         </Flex>
         <Divider y={12} />
         {/* fin tx */}
+        {/* tx */}
+        <Divider y={12} />
+        <Flex justify="space-between">
+          <Flex gap="sm" align="center">
+            <div>
+              <Avatar size="sm">
+                <Icon size="sm" icon={<Send />} />
+              </Avatar>
+            </div>
+            <Flex direction="column" gap={0}>
+              <Flex gap="xs" align="end">
+                <Text>Transferiste</Text>
+                <Text color={appTheme.colors.gray[700]} size="xs">
+                  •
+                </Text>
+                <Text color={appTheme.colors.gray[500]}>10h</Text>
+              </Flex>
+              <Text color={appTheme.colors.gray[500]}>via lightning.</Text>
+            </Flex>
+          </Flex>
+          <Text>-$121.80</Text>
+        </Flex>
+        <Divider y={12} />
+        {/* fin tx */}
+        {/* tx */}
+        <Divider y={12} />
+        <Flex justify="space-between">
+          <Flex gap="sm" align="center">
+            <div>
+              <Avatar size="sm">
+                <Icon size="sm" icon={<Receive />} />
+              </Avatar>
+            </div>
+            <Flex direction="column" gap={0}>
+              <Flex gap="xs" align="end">
+                <Text>Recibiste</Text>
+                <Text color={appTheme.colors.gray[700]} size="xs">
+                  •
+                </Text>
+                <Text color={appTheme.colors.gray[500]}>08/05/24</Text>
+              </Flex>
+              <Text color={appTheme.colors.gray[500]}>via lightning.</Text>
+            </Flex>
+          </Flex>
+          <Text color={appTheme.colors.success[400]}>+$121.80</Text>
+        </Flex>
+        <Divider y={12} />
+        {/* fin tx */}
+        {/* tx */}
+        <Divider y={12} />
+        <Flex justify="space-between">
+          <Flex gap="sm" align="center">
+            <div>
+              <Avatar size="sm">
+                <Icon size="sm" icon={<Receive />} />
+              </Avatar>
+            </div>
+            <Flex direction="column" gap={0}>
+              <Flex gap="xs" align="end">
+                <Text color={appTheme.colors.error[400]}>Devolución</Text>
+                <Text color={appTheme.colors.gray[700]} size="xs">
+                  •
+                </Text>
+                <Text color={appTheme.colors.gray[500]}>08/05/24</Text>
+              </Flex>
+              <Text color={appTheme.colors.gray[500]}>via lightning.</Text>
+            </Flex>
+          </Flex>
+          <Text color={appTheme.colors.error[400]}>$121.80</Text>
+        </Flex>
+        <Divider y={12} />
+        {/* fin tx */}
       </Container>
-    </div>
+    </>
   );
 };

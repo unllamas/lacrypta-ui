@@ -27,11 +27,11 @@ export const Hero = () => {
           </Text>
           <Divider y={24} />
           <Link href="/docs">
-            <Button>Empezar ahora</Button>
+            <Button variant="bezeled">Empezar ahora</Button>
           </Link>
         </Flex>
       </Container>
-      <Divider y={80} />
+      <Divider y={48} />
     </>
   );
 };

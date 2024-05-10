@@ -1,14 +1,34 @@
 import React from 'react';
-import { Flex } from '@unllamas/lacrypta-ui';
+import { Flex, Button, Container, Divider, Text } from '@unllamas/lacrypta-ui';
 import { Hero } from '../components/Landing/Hero';
+import { Preview } from '../components/Landing/Preview';
 import { DashboardPreview } from '../components/Landing/DashboardPreview';
+
+import { appTheme } from '@/config/theme';
 
 export default () => { 
   return ( 
-    <Flex direction='column' flex={1}>
-      <Hero />
-      <DashboardPreview />
-    </Flex>
+      <Flex direction='column' flex={1}>
+        <Hero />
+        <Container size='lg'>
+          <Flex gap='sm' align='center'>
+            <Text size='sm' color={appTheme.colors.gray[500]}>Ejemplos:</Text>
+            <div>
+              <Button variant='bezeledGray' size='sm'>Billetera</Button>
+            </div>
+            <div>
+              <Button variant='borderless' size='sm' disabled={true}>Tickets</Button>
+            </div>
+            <div>
+              <Button variant='borderless' size='sm' disabled={true}>Tienda</Button>
+            </div>
+          </Flex>
+        </Container>
+        <Divider y={24} />
+        <Preview>
+          <DashboardPreview />
+        </Preview>
+      </Flex>
   )
 
 }
