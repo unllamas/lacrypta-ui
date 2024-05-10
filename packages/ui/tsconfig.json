@@ -2,7 +2,9 @@
   "extends": "@repo/typescript-config/react-library.json",
   "compilerOptions": {
     "outDir": "dist",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "emitDeclarationOnly": true,
     "baseUrl": "./src",
     "paths": {
       "@/*": ["./*"]

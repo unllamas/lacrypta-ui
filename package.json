@@ -11,8 +11,7 @@
     "doc:dev": "pnpm --filter @repo/docs dev"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
-    "@repo/typescript-config": "workspace:*",
+    "@lawallet/typescript-config": "1.0.0",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },

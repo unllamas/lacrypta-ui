@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "lint": "eslint",
-    "lint:fix": "eslint --fix --ext '**/*.{jsx,js}'",
     "build": "node esbuild.config.js",
     "generate:component": "turbo gen react-component"
   },
@@ -25,8 +24,7 @@
     "eslint": "^8.57.0",
     "typescript": "^5.3.3",
     "esbuild": "0.19.11",
-    "esbuild-plugin-styled-components": "^3.0.1",
-    "eslint-config-standard-with-typescript": "^43.0.0"
+    "esbuild-plugin-styled-components": "^3.0.1"
   },
   "peerDependencies": {
     "react": "^18.2.0",
