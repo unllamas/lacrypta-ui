@@ -117,7 +117,7 @@ export const DashboardPreview = () => {
 
         {/* tx */}
         <Divider y={12} />
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm" alt="GO" />
@@ -141,7 +141,7 @@ export const DashboardPreview = () => {
         {/* fin tx */}
         {/* tx */}
         <Divider y={12} />
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm" alt="CU" />
@@ -165,7 +165,7 @@ export const DashboardPreview = () => {
         {/* fin tx */}
         {/* tx */}
         <Divider y={12} />
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm">
@@ -189,7 +189,7 @@ export const DashboardPreview = () => {
         {/* fin tx */}
         {/* tx */}
         <Divider y={12} />
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm">
@@ -213,7 +213,7 @@ export const DashboardPreview = () => {
         {/* fin tx */}
         {/* tx */}
         <Divider y={12} />
-        <Flex justify="space-between">
+        <Flex justify="space-between" align="center" gap="sm">
           <Flex gap="sm" align="center">
             <div>
               <Avatar size="sm">
