@@ -4,7 +4,7 @@ export * from './Button/ButtonGroup';
 export * from './Card';
 export { Flex } from './Flex';
 export * from './Divider';
-export * from './Heading';
+export { Heading } from './Heading';
 export * from './Text';
 export * from './Input';
 export * from './Input/Feedback';
