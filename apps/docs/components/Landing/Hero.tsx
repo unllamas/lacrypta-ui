@@ -14,16 +14,14 @@ export const Hero = () => {
     <>
       <Container size="md">
         <Divider y={80} />
-        <Heading align="center">
-          El design system que tu proyecto de Next esperaba
-        </Heading>
+        <Heading align="center">Generá aplicaciones como un rayo</Heading>
       </Container>
       <Divider y={12} />
       <Container size="sm">
         <Flex direction="column" align="center">
           <Text align="center">
-            Genera rápidamente aplicaciones web con nuestros componentes y
-            layouts adaptados para la ocasion.
+            Librería de componentes de UI para agilizar la construcción de
+            aplicaciones web. Nuestro enfoque: mobile first.
           </Text>
           <Divider y={24} />
           <Link href="/docs">
