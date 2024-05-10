@@ -4,14 +4,15 @@ import { AvatarStyle } from './style';
 
 interface AvatarProps {
   src?: string;
-  alt: string;
+  alt?: string;
+  name?: string;
   // Deprecated normal and large
-  size: 'normal' | 'large' | 'xs' | 'sm' | 'md';
+  size: 'normal' | 'large' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
   children?: React.ReactNode;
 }
 
 export const Avatar: FC<AvatarProps> = (props) => {
-  const { src, alt = '', size, children } = props;
+  const { src, alt = '', size = 'sm', children, name } = props;
 
   let sizeValue: number = 0;
 
@@ -24,6 +25,12 @@ export const Avatar: FC<AvatarProps> = (props) => {
       break;
     case 'md':
       sizeValue = 12;
+      break;
+    case 'lg':
+      sizeValue = 16;
+      break;
+    case 'xl':
+      sizeValue = 20;
       break;
     // Deprecated normal and large
     case 'normal':
@@ -38,9 +45,9 @@ export const Avatar: FC<AvatarProps> = (props) => {
     <AvatarStyle $size={sizeValue}>
       {!children ? (
         !src ? (
-          alt.slice(0, 2).toLocaleUpperCase()
+          (name ?? alt).slice(0, 2).toLocaleUpperCase()
         ) : (
-          <img src={src} alt={alt} />
+          <img src={src} alt={name ?? alt} />
         )
       ) : (
         children
