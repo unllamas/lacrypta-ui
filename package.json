@@ -12,7 +12,7 @@
     "clean": "rm -rf ./node_modules && rm -rf ./turbo"
   },
   "devDependencies": {
-    "@lawallet/typescript-config": "1.0.0",
+    "@lacrypta/typescript-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
