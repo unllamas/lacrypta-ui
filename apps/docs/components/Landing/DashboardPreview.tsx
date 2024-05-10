@@ -18,12 +18,12 @@ import { appTheme } from '@/config/theme';
 export const DashboardPreview = () => {
   return (
     <>
-      <Divider y={40} />
+      <Divider y={16} />
       <Container>
         <Flex justify="space-between">
           <Flex gap="sm" align="center">
             <Flex flex={0}>
-              <Avatar alt="GO" size="sm" />
+              <Avatar alt="DI" size="sm" />
             </Flex>
             <Flex direction="column" gap={0}>
               <Text size="sm" color={appTheme.colors.gray[500]}>
