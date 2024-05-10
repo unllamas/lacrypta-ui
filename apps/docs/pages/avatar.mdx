@@ -1,0 +1,60 @@
+import { Callout } from 'nextra/components';
+import {
+  Avatar,
+  Flex,
+  Card,
+  Container,
+  Divider,
+} from '@unllamas/lacrypta-ui';
+
+# Avatar
+
+The Avatar component is used to represent user, and displays the profile picture, initials or fallback icon.
+
+## Import 
+
+```js
+import { Avatar } from '@unllamas/lacrypta-ui'
+```
+
+## Usage
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Flex gap='xs'>
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' />
+    <Avatar src='https://bit.ly/gorila-lacrypta-ar' name='Gorila' />
+    <Avatar src='https://bit.ly/pulpo-hodl-ar' name='Pulpo' />
+  </Flex>
+</Card>
+
+```js
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' />
+<Avatar src='https://bit.ly/gorila-lacrypta-ar' name='Gorila' />
+<Avatar src='https://bit.ly/pulpo-hodl-ar' name='Pulpo' />
+```
+
+### Avatar Size
+
+El componente `Avatar` posee 5 tamaños.
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Flex gap='xs'>
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='xs' />
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='sm' />
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='md' />
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='lg' />
+    <Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='xl' />
+  </Flex>
+</Card>
+
+```js
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='xs' />
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='sm' />
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='md' />
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='lg' />
+<Avatar src='https://bit.ly/llama-lawallet-ar' name='Llama' size='xl' />
+```
