@@ -10,13 +10,12 @@
   ],
   "scripts": {
     "lint": "eslint",
-    "build": "node esbuild.config.js",
+    "build": "node esbuild.config.js && tsc",
     "generate:component": "turbo gen react-component"
   },
   "devDependencies": {
     "@repo/eslint-config": "workspace:*",
     "@repo/typescript-config": "workspace:*",
-    "@turbo/gen": "^1.12.4",
     "@types/node": "^20.11.24",
     "@types/eslint": "^8.56.5",
     "@types/react": "^18.2.61",
@@ -27,6 +26,7 @@
     "esbuild-plugin-styled-components": "^3.0.1"
   },
   "peerDependencies": {
+    "next": "^14",
     "react": "^18.2.0",
     "styled-components": "^6.1.6"
   },
