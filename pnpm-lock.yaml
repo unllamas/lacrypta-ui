@@ -8,6 +8,9 @@ importers:
 
   .:
     devDependencies:
+      '@lacrypta/eslint-config':
+        specifier: workspace:*
+        version: link:packages/eslint-config
       '@lacrypta/typescript-config':
         specifier: workspace:*
         version: link:packages/typescript-config

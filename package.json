@@ -13,6 +13,7 @@
   },
   "devDependencies": {
     "@lacrypta/typescript-config": "workspace:*",
+    "@lacrypta/eslint-config": "workspace:*",
     "prettier": "^3.2.5",
     "turbo": "latest"
   },
