@@ -1,11 +1,10 @@
 import { appTheme } from '@/config/theme';
 
-const style = {
+const genericPreview = {
   overflow: 'hidden',
-  maxHeight: '668px',
   width: '100%',
-  maxWidth: '1024px',
   margin: '0 auto',
+  padding: '24px',
   backgroundColor: appTheme.colors.background,
   borderRadius: '24px 24px 0 0',
   border: `1px solid ${appTheme.colors.gray[800]}`,
@@ -15,8 +14,27 @@ const style = {
 
 interface PreviewProps {
   children: React.ReactNode;
+  screen: 'xs' | 'sm' | 'md';
 }
 
-export const Preview = ({ children }: PreviewProps) => {
-  return <div style={style}>{children}</div>;
+export const Preview = ({ children, screen }: PreviewProps) => {
+  let device;
+
+  switch (screen) {
+    case 'xs':
+      device = '420px';
+      break;
+    case 'sm':
+      device = '768px';
+      break;
+    case 'md':
+      device = '1024px';
+      break;
+  }
+
+  return (
+    <div style={{ width: '100%', maxWidth: device }}>
+      <div style={genericPreview}>{children}</div>
+    </div>
+  );
 };

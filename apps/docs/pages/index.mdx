@@ -33,9 +33,11 @@ export default () => {
         </Flex>
       </Container>
       <Divider y={24} />
-      <Preview>
-        <DashboardPreview />
-      </Preview>
+      <Flex justify='center'>
+        <Preview screen='md'>
+          <DashboardPreview />
+        </Preview>
+      </Flex>
     </Flex>
   );
 };
