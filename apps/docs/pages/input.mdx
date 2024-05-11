@@ -1,0 +1,99 @@
+import { Callout } from 'nextra/components';
+import {
+  Heading,
+  Card,
+  Text,
+  Button,
+  Container,
+  Divider,
+  Input,
+  InputGroup,
+  InputGroupRight,
+} from '@unllamas/lacrypta-ui';
+
+# Input
+
+Input component is a component that is used to get user input in a text field.
+
+## Import
+
+```js
+import { Input } from '@unllamas/lacrypta-ui';
+```
+
+## Usage
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Input placeholder='Basic usage'/>
+</Card>
+
+```js
+<Input placeholder='Basic usage'/>
+```
+
+### Input Label
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Input placeholder="you@email.com" label='Correo electrónico' id='email' />
+</Card>
+
+```js
+<Input placeholder="you@email.com" label='Correo electrónico' id='email' />
+```
+
+### Input Status
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you@email.com' status="success" isChecked />
+  <Divider y='sm' />
+  <Input placeholder="you@email.com" label='Correo electrónico' id='email' value='email.com' status="error" isError />
+</Card>
+
+```js
+<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you@email.com' status="success" isChecked />
+<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='email.com' status="error" isError />
+```
+
+### Input Loading
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you-new@email.com' disabled isLoading />
+</Card>
+
+```js
+<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you-new@email.com' disabled isLoading />
+```
+
+### With Button
+
+```js
+import { Input, InputGroup, InputGroupRight } from '@unllamas/lacrypta-ui';
+```
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <InputGroup>
+    <Input placeholder="you@email.com" />
+    <InputGroupRight>
+      <Button>Paste</Button>
+    </InputGroupRight>
+  </InputGroup>
+</Card>
+
+```js
+<InputGroup>
+  <Input placeholder="you@email.com" />
+  <InputGroupRight>
+    <Button>Paste</Button>
+  </InputGroupRight>
+</InputGroup>
+```
