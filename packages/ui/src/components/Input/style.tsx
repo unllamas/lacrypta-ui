@@ -8,7 +8,6 @@ export const InputBox = styled.div<InputBoxProps>`
   position: relative;
 
   width: 100%;
-  max-width: 320px;
 
   border-radius: 8px;
 
