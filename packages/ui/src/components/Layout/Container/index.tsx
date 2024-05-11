@@ -8,7 +8,7 @@ interface ContainerProps {
 }
 
 export function Container(props: ContainerProps): JSX.Element {
-  const { children, size } = props;
+  const { children, size = 'md' } = props;
 
   let width;
 
@@ -29,7 +29,7 @@ export function Container(props: ContainerProps): JSX.Element {
     case 'small':
       width = '450px';
       break;
-    default:
+    case 'medium':
       width = '700px';
       break;
   }
