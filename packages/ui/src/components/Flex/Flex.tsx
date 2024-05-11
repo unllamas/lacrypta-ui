@@ -5,7 +5,7 @@ import { FlexPrimitive } from './style';
 interface FlexProps {
   children?: ReactNode;
   // Deprecated numeric gap
-  gap?: 0 | 2 | 4 | 8 | 16 | 'xs' | 'sm' | 'md' | 'undefined';
+  gap?: 0 | 2 | 4 | 8 | 16 | 'xs' | 'sm' | 'md' | 'none';
   direction?: 'row' | 'column';
   flex?: 0 | 1 | 'initial';
   justify?: 'start' | 'end' | 'space-between' | 'center';
@@ -15,7 +15,7 @@ interface FlexProps {
 export function Flex(props: FlexProps): JSX.Element {
   const {
     children,
-    gap = 'undefined',
+    gap = 'none',
     direction = 'row',
     flex = 'initial',
     justify = 'start',
@@ -25,7 +25,7 @@ export function Flex(props: FlexProps): JSX.Element {
   let gapSize;
 
   switch (gap) {
-    case 'undefined':
+    case 'none':
       gapSize = 'inherit';
       break;
     case 'xs':
