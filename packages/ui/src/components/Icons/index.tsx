@@ -5,5 +5,7 @@ export { Hidden } from './Hidden';
 export { Receive } from './Receive';
 export { Send } from './Send';
 export { Visible } from './Visible';
+export { Cancel } from './Cancel';
+export { Satoshi } from './Satoshi';
 // Customs
 export { Loader } from './Loader';
