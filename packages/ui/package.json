@@ -5,8 +5,11 @@
   "main": "dist/index.js",
   "type": "module",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
+    "dev": "tsc && node watch.config.js",
     "lint": "eslint",
     "build": "node esbuild.config.js && tsc",
     "generate:component": "turbo gen react-component"

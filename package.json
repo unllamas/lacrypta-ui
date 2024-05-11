@@ -9,6 +9,7 @@
     "build:ui": "pnpm --filter @unllamas/lacrypta-ui build",
     "web:dev": "pnpm --filter @lacrypta/web dev",
     "doc:dev": "pnpm --filter @lacrypta/docs dev",
+    "ui:dev": "pnpm --filter @unllamas/lacrypta-ui dev",
     "clean": "rm -rf ./node_modules && rm -rf ./turbo"
   },
   "devDependencies": {

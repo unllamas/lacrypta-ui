@@ -1,7 +1,7 @@
 import * as esbuild from 'esbuild';
 import styledComponentsPlugin from 'esbuild-plugin-styled-components';
 
-await esbuild.build({
+export const esbuildConfig = {
   entryPoints: ['src/index.tsx'],
   bundle: true,
   minify: true,
@@ -18,4 +18,10 @@ await esbuild.build({
       transpileTemplateLiterals: true,
     }),
   ],
-});
+};
+
+async function build() {
+  await esbuild.build(esbuildConfig);
+}
+
+build();
