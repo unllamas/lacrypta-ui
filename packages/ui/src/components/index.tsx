@@ -9,6 +9,7 @@ export { Avatar } from './Avatar';
 export { Icon } from './Icon';
 export * from './Icons';
 export * from './Drawer';
+export * from './QRCode';
 
 // Inputs
 export * from './Input';
