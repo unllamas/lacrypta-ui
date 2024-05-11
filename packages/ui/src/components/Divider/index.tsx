@@ -23,6 +23,9 @@ export function Divider(props: DividerProps): JSX.Element {
     case 'md':
       spacing = '16px';
       break;
+    case 'lg':
+      spacing = '32px';
+      break;
     default:
       spacing = `${y}px`;
       break;
