@@ -103,6 +103,21 @@ const GlobalStyles = createGlobalStyle`
   button {
     font-family: ${(props) => props.theme.font.secondary};
   }
+
+  button {
+    font-weight: bold;
+  }
+
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible {
+    box-shadow: none !important
+  }
+
+  label {
+    font-size: .8rem;
+    font-weight: bold;
+  }
 `;
 
 export default GlobalStyles;
