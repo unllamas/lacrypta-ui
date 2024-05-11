@@ -5,6 +5,8 @@ import { Flex } from '../Flex';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
 
+import { useDisclosure } from 'hooks';
+
 import { SheetPrimitive, SheetContent, SheetBody } from './style';
 
 interface SheetProps {
@@ -15,34 +17,25 @@ interface SheetProps {
   closeText?: string;
 }
 
-export const Sheet = (props: SheetProps) => {
+export const Drawer = (props: SheetProps) => {
   const { children, isOpen, closeText = 'Close', onClose, title } = props;
 
-  const [open, setOpen] = useState(false);
-
-  useEffect(() => {
-    setOpen(isOpen);
-  }, [isOpen]);
-
-  const handleClose = () => {
-    setOpen(false);
-    onClose();
-  };
-
   return (
-    <SheetPrimitive $isOpen={open}>
-      <SheetContent $isOpen={open}>
+    <SheetPrimitive $isOpen={isOpen}>
+      <SheetContent $isOpen={isOpen}>
         <Flex>
           <Container>
             <Flex align="center" justify="space-between">
               <Heading as="h6">{title}</Heading>
-              <Button size="small" variant="borderless" onClick={handleClose}>
+              <Button size="small" variant="borderless" onClick={onClose}>
                 {closeText}
               </Button>
             </Flex>
           </Container>
         </Flex>
-        <SheetBody>{children}</SheetBody>
+        <SheetBody>
+          <Container size="sm">{children}</Container>
+        </SheetBody>
       </SheetContent>
     </SheetPrimitive>
   );

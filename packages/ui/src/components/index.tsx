@@ -8,7 +8,7 @@ export * from './Text';
 export { Avatar } from './Avatar';
 export { Icon } from './Icon';
 export * from './Icons';
-export * from './Sheet';
+export * from './Drawer';
 
 // Inputs
 export * from './Input';

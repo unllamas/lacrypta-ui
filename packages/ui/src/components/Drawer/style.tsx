@@ -6,21 +6,21 @@ interface SheetPrimitiveProps {
 
 export const SheetPrimitive = styled.div<SheetPrimitiveProps>`
   position: fixed;
-  overflow-x: hidden;
+  overflow: hidden;
   bottom: 0;
   left: 0;
-  z-index: 3;
+  z-index: ${(props) => (props.$isOpen ? 21 : -1)};
+  opacity: ${(props) => (props.$isOpen ? 1 : 0)};
 
+  display: flex;
+  align-items: end;
   width: 100%;
   height: 100%;
 
   background-color: ${(props) =>
-    props.$isOpen ? props.theme.colors.background : 'transparent'};
+    props.$isOpen ? 'rgba(0,0,0,.68)' : 'transparent'};
 
-  transform: ${(props) =>
-    props.$isOpen ? 'translateY(0)' : 'translateY(100%)'};
   transition-duration: 0.2s;
-  transform: ${(props) => (props.$isOpen ? 1 : 0)};
 `;
 
 interface SheetContentProps {
@@ -35,12 +35,13 @@ export const SheetContent = styled.div<SheetContentProps>`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: calc(100dvh - 60px);
+  height: auto;
+  max-height: calc(100dvh - 60px);
 
   margin-top: 60px;
-  padding-top: 24px;
+  padding: 24px 0 48px 0;
 
-  background-color: ${(props) => props.theme.colors.gray[900]};
+  background-color: ${(props) => props.theme.colors.background};
   border-radius: 24px 24px 0 0;
 
   transform: ${(props) =>
