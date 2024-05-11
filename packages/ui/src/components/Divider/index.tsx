@@ -1,11 +1,32 @@
-import React from 'react';
-
-import { DividerProps } from './types';
-
+import { Size } from 'types/styles';
 import { DividerPrimitive } from './style';
 
-export function Divider(props: DividerProps): JSX.Element {
-  const { y = 0 } = props;
+interface DividerProps {
+  y?: number | Size;
+}
 
-  return <DividerPrimitive $y={y} />;
+export function Divider(props: DividerProps): JSX.Element {
+  const { y = 'none' } = props;
+
+  let spacing;
+
+  switch (y) {
+    case 'none':
+      spacing = 'inherit';
+      break;
+    case 'xs':
+      spacing = '4px';
+      break;
+    case 'sm':
+      spacing = '8px';
+      break;
+    case 'md':
+      spacing = '16px';
+      break;
+    default:
+      spacing = `${y}px`;
+      break;
+  }
+
+  return <DividerPrimitive $y={spacing} />;
 }
