@@ -24,7 +24,7 @@ export const Drawer = (props: SheetProps) => {
     <SheetPrimitive $isOpen={isOpen}>
       <SheetContent>
         <Flex>
-          <Container>
+          <Container size="md">
             <Flex align="center" justify="space-between">
               <Heading as="h6">{title}</Heading>
               <Button size="small" variant="borderless" onClick={onClose}>

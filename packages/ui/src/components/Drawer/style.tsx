@@ -5,7 +5,7 @@ interface SheetPrimitiveProps {
 }
 
 export const SheetPrimitive = styled.div<SheetPrimitiveProps>`
-  position: fixed;
+  position: absolute;
   overflow: hidden;
   bottom: 0;
   left: 0;
