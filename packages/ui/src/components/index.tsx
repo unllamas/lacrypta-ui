@@ -8,6 +8,10 @@ export * from './Text';
 export { Avatar } from './Avatar';
 export { Icon } from './Icon';
 export * from './Icons';
+export * from './Sheet';
+
+// Inputs
+export * from './Input';
 
 // Layout
 export * from './Layout/Container';
