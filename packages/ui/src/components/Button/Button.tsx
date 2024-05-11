@@ -17,6 +17,7 @@ export const Button: FC<ButtonProps> = ({
   size = 'normal',
   loading = false,
   disabled = false,
+  isBlock = false,
   // explicitLoader = <BtnLoader />,
   ...props
 }): JSX.Element => {
@@ -45,6 +46,7 @@ export const Button: FC<ButtonProps> = ({
 
   return (
     <ButtonStyle
+      $width={isBlock ? '100%' : 'auto'}
       $background={backgroundColor}
       $color={textColor}
       $size={size}

@@ -20,16 +20,6 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   tabIndex?: number;
   style?: CSSProperties;
   explicitLoader?: ReactElement;
-}
-
-export interface BaseButtonProps {
-  $background?: string;
-  $color?: string;
-  $size: Size;
-}
-
-export interface ButtonCustomProps {
-  $background?: string;
-  $color?: string;
-  $isSmall?: boolean;
+  // Style
+  isBlock?: boolean;
 }

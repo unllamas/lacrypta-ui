@@ -1,15 +1,15 @@
 import { styled } from 'styled-components';
 
-import { BaseButtonProps, ButtonCustomProps } from './types';
+import { Size } from 'types/styles';
 
 const handleChangeSize = (size: string) => {
   switch (size) {
     case 'xs':
-      return `height: 30px; padding: .6rem .2rem; font-size: .7rem;`;
+      return `min-width: 30px; height: 30px; padding: 0 .3rem; font-size: .7rem; line-height: 30px;`;
     case 'sm':
-      return `height: 40px; padding: .6rem .5rem; font-size: .8rem;`;
+      return `min-width: 40px; height: 40px; padding: 0 .5rem; font-size: .8rem; line-height: 40px;`;
     case 'md':
-      return `height: 50px; padding: 0 .8rem; font-size: .8rem;`;
+      return `min-width: 50px; height: 50px; padding: 0 .8rem; font-size: .8rem; line-height: 50px;`;
     // Deprecated small and normal
     case 'small':
       return `height: 40px; padding: .6rem .5rem; font-size: .8rem;`;
@@ -18,13 +18,19 @@ const handleChangeSize = (size: string) => {
   }
 };
 
+interface BaseButtonProps {
+  $background?: string;
+  $color?: string;
+  $size: Size;
+  $width: string;
+}
+
 export const ButtonStyle = styled.button<BaseButtonProps>`
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  width: 100%;
-  max-width: 320px;
+  width: ${(props) => props.$width};
 
   border: none;
   border-radius: ${(props) => props.theme.borders.buttonRadius};
@@ -58,8 +64,18 @@ export const ButtonStyle = styled.button<BaseButtonProps>`
     &:active {
       opacity: 0.65;
     }
+
+    &:focus-visible {
+      outline: 1px solid ${(props) => props.theme.colors.gray[200]};
+    }
   }
 `;
+
+interface ButtonCustomProps {
+  $background?: string;
+  $color?: string;
+  $isSmall?: boolean;
+}
 
 export const ButtonCustom = styled.button<ButtonCustomProps>`
   display: flex;
