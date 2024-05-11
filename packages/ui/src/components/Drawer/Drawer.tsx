@@ -22,7 +22,7 @@ export const Drawer = (props: SheetProps) => {
 
   return (
     <SheetPrimitive $isOpen={isOpen}>
-      <SheetContent $isOpen={isOpen}>
+      <SheetContent>
         <Flex>
           <Container>
             <Flex align="center" justify="space-between">

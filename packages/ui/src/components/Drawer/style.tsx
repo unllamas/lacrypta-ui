@@ -21,13 +21,23 @@ export const SheetPrimitive = styled.div<SheetPrimitiveProps>`
     props.$isOpen ? 'rgba(0,0,0,.68)' : 'transparent'};
 
   transition-duration: 0.2s;
+
+  > div {
+    z-index: ${(props) => (props.$isOpen ? 21 : -1)};
+    opacity: ${(props) => (props.$isOpen ? 1 : 0)};
+
+    transform: ${(props) =>
+      props.$isOpen ? 'translateY(0)' : 'translateY(100%)'};
+
+    transition-duration: 0.4s;
+  }
 `;
 
 interface SheetContentProps {
   $isOpen?: boolean;
 }
 
-export const SheetContent = styled.div<SheetContentProps>`
+export const SheetContent = styled.div`
   position: relative;
   z-index: 2;
   overflow: hidden;
@@ -43,10 +53,6 @@ export const SheetContent = styled.div<SheetContentProps>`
 
   background-color: ${(props) => props.theme.colors.background};
   border-radius: 24px 24px 0 0;
-
-  transform: ${(props) =>
-    props.$isOpen ? 'translateY(0)' : 'translateY(100%)'};
-  transition-duration: 0.4s;
 `;
 export const SheetBody = styled.div`
   overflow-y: auto;
