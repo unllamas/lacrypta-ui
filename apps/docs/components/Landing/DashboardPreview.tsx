@@ -92,11 +92,11 @@ export const DashboardPreview = () => {
       <Divider y={24} />
       <Container size="sm">
         <Flex flex={1} justify="center" gap="sm">
-          <Button>
+          <Button isBlock>
             <Icon size="md" icon={<Receive />} />
             Depositar
           </Button>
-          <Button color="secondary">
+          <Button isBlock color="secondary">
             <Icon size="md" icon={<Send />} />
             Transferir
           </Button>
