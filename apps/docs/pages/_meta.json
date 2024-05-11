@@ -17,6 +17,7 @@
   },
   "avatar": "Avatar",
   "button": "Button",
+  "drawer": "Drawer",
   "flex": "Flex",
   "heading": "Heading",
   "input": "Input",

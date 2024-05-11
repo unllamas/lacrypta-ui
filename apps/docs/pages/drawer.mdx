@@ -1,0 +1,57 @@
+import { Callout } from 'nextra/components';
+import { Card, Button, Flex, Drawer, Container, Divider, Input, useDisclosure } from '@unllamas/lacrypta-ui';
+
+# Drawer
+
+## Import
+
+```js
+import { Drawer } from '@unllamas/lacrypta-ui';
+```
+
+## Usage
+
+<br />
+
+export function PreviewDrawer({ children }) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <>
+      <div>
+        <Button onClick={onOpen}>Open Drawer</Button>
+      </div>
+      <Drawer isOpen={isOpen} onClose={onClose}>
+        <Input label="Email" placeholder="you@example.com" />
+        <Divider y="sm" />
+        <Flex gap="sm">
+          <Button isBlock variant="bezeledGray" onClick={onClose}>
+            Cancelar
+          </Button>
+          <Button isBlock>Guardar</Button>
+        </Flex>
+      </Drawer>
+    </>
+  )
+}
+
+<Card variant="outline" spacing={4}>
+  <PreviewDrawer>Open Drawer</PreviewDrawer>
+</Card>
+
+```js showLineNumbers {8,9,18} /useDisclosure/
+import { useDisclosure, Drawer } from '@unllamas/lacrypta-ui';
+
+export const Preview = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
+  return (
+    <>
+      <Button onClick={onOpen}>Open Drawer</Button>
+      <Drawer isOpen={isOpen} onClose={onClose}>
+        ...
+      </Drawer>
+    </>
+  );
+}
+```
