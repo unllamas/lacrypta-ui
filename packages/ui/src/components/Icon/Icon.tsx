@@ -11,7 +11,7 @@ export interface IconProps {
 }
 
 export function Icon(props: IconProps) {
-  const { children, size = 4, icon } = props;
+  const { children, size = 'md', icon } = props;
 
   let sizeValue;
 
