@@ -52,7 +52,7 @@ interface ColorType {
 
 Adentro de una carpeta `config` en el root del proyecto crearemos los siguientes archivos:
 
-```json copy filename="config/theme.json"
+```json showLineNumbers copy filename="config/theme.json"
 {
   "colors": {
     "primary": {
@@ -70,7 +70,7 @@ Adentro de una carpeta `config` en el root del proyecto crearemos los siguientes
 }
 ```
 
-```js copy filename="config/theme.js"
+```js showLineNumbers copy filename="config/theme.js"
 // 1. Import `createTheme` from
 import { createTheme } from '@unllamas/lacrypta-ui';
 
@@ -85,7 +85,7 @@ export const appTheme = createTheme(theme);
 
 Una vez configurado nuestro `appTheme` solo debemos integrarlo al `AppProvider.js` anteriormente creado:
 
-```js copy {6, 10} filename="context/AppProvider.js"
+```js showLineNumbers copy {6, 10} filename="context/AppProvider.js"
 'use client';
 
 import { NextProvider } from '@unllamas/lacrypta-ui';

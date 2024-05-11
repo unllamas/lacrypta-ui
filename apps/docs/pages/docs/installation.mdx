@@ -28,7 +28,7 @@ npm i @unllamas/lacrypta-ui
 
 Es esencial agregar `NextProvider` en la raíz de su aplicación. Para ello crearemos una carpeta `context` en el root del proyecto y generaremos el siguiente archivo:
 
-```js copy filename="context/AppProvider.tsx"
+```js showLineNumbers copy filename="context/AppProvider.tsx"
 'use client';
 
 import { NextProvider } from '@unllamas/lacrypta-ui';
@@ -40,7 +40,7 @@ export function AppProvider({ children }) {
 
 Configurado nuestro Provider, pasaremos a usarlo en su `layout` principal
 
-```js copy {2,9} filename="app/layout.tsx"
+```js showLineNumbers copy {2,9} filename="app/layout.tsx"
 // 1. Import `AppProvider` component
 import { AppProvider } from '../context/AppProvider';
 
@@ -60,7 +60,7 @@ export function App({ children }) {
 
 Ahora, usted puede usar el componente que has instalado en tu aplicación.
 
-```js copy {4, 10} filename="app/page.tsx"
+```js showLineNumbers copy {4, 10} filename="app/page.tsx"
 'use client';
 
 // 1. Import `Button` componente

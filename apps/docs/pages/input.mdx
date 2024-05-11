@@ -17,7 +17,7 @@ Input component is a component that is used to get user input in a text field.
 
 ## Import
 
-```js
+```js copy
 import { Input } from '@unllamas/lacrypta-ui';
 ```
 
@@ -29,7 +29,7 @@ import { Input } from '@unllamas/lacrypta-ui';
   <Input placeholder='Basic usage'/>
 </Card>
 
-```js
+```js copy
 <Input placeholder='Basic usage'/>
 ```
 
@@ -41,8 +41,8 @@ import { Input } from '@unllamas/lacrypta-ui';
   <Input placeholder="you@email.com" label='Correo electrónico' id='email' />
 </Card>
 
-```js
-<Input placeholder="you@email.com" label='Correo electrónico' id='email' />
+```js copy /label/
+<Input ... label='Correo electrónico' id='email' />
 ```
 
 ### Input Status
@@ -55,9 +55,9 @@ import { Input } from '@unllamas/lacrypta-ui';
   <Input placeholder="you@email.com" label='Correo electrónico' id='email' value='email.com' status="error" isError />
 </Card>
 
-```js
-<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you@email.com' status="success" isChecked />
-<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='email.com' status="error" isError />
+```js copy /status/ /isChecked/ /isError/
+<Input ... status="success" isChecked />
+<Input ... status="error" isError />
 ```
 
 ### Input Loading
@@ -68,15 +68,11 @@ import { Input } from '@unllamas/lacrypta-ui';
   <Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you-new@email.com' disabled isLoading />
 </Card>
 
-```js
-<Input placeholder="you@email.com" label='Correo electrónico' id='email' value='you-new@email.com' disabled isLoading />
+```js copy /disabled/ /isLoading/
+<Input ... disabled isLoading />
 ```
 
 ### With Button
-
-```js
-import { Input, InputGroup, InputGroupRight } from '@unllamas/lacrypta-ui';
-```
 
 <br />
 
@@ -89,11 +85,17 @@ import { Input, InputGroup, InputGroupRight } from '@unllamas/lacrypta-ui';
   </InputGroup>
 </Card>
 
-```js
-<InputGroup>
-  <Input placeholder="you@email.com" />
-  <InputGroupRight>
-    <Button>Paste</Button>
-  </InputGroupRight>
-</InputGroup>
+```js copy showLineNumbers {1, 5-10}
+import { Input, InputGroup, InputGroupRight } from '@unllamas/lacrypta-ui';
+
+const Preview = () => {
+  return (
+    <InputGroup>
+      <Input placeholder="you@email.com" />
+      <InputGroupRight>
+        <Button>Paste</Button>
+      </InputGroupRight>
+    </InputGroup>
+  );
+}
 ```
