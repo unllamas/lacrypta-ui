@@ -15,8 +15,10 @@
     "type": "separator",
     "title": "Components"
   },
+  "avatar": "Avatar",
   "button": "Button",
   "flex": "Flex",
   "heading": "Heading",
-  "text": "Text"
+  "input": "Input",
+  "textarea": "Textarea"
 }
