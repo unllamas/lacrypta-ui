@@ -7,5 +7,6 @@ export { Send } from './Send';
 export { Visible } from './Visible';
 export { Cancel } from './Cancel';
 export { Satoshi } from './Satoshi';
+export { Trash } from './Trash';
 // Customs
 export { Loader } from './Loader';
