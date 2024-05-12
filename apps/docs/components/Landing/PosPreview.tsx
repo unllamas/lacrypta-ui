@@ -16,7 +16,7 @@ import {
   Footer,
   Trash,
 } from '@unllamas/lacrypta-ui';
-// import confetti from 'canvas-confetti';
+import confetti from 'canvas-confetti';
 
 // LaWallet
 import { NostrProvider, useZap } from '@lawallet/react';
@@ -164,7 +164,10 @@ export const PosPreview = () => {
   }, []);
 
   useEffect(() => {
-    if (invoice.payed) setSheetStep('finished');
+    if (invoice.payed) {
+      setSheetStep('finished');
+      confetti({});
+    }
   }, [invoice.payed]);
 
   return (
