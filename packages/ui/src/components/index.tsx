@@ -16,3 +16,4 @@ export * from './Input';
 
 // Layout
 export * from './Layout/Container';
+export * from './Layout/Footer';
