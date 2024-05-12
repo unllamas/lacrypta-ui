@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Flex, Button, Container, Divider, Text } from '@unllamas/lacrypta-ui';
 import { Hero } from '../components/Landing/Hero';
 import { Preview } from '../components/Landing/Preview';
 import { DashboardPreview } from '../components/Landing/DashboardPreview';
+import { PosPreview } from '../components/Landing/PosPreview';
 
 import { appTheme } from '@/config/theme';
 
 export default () => {
+  const [preview, setPreview] = useState('wallet')
+
   return (
     <Flex direction="column" flex={1}>
       <Hero />
@@ -16,8 +19,13 @@ export default () => {
             Ejemplos:
           </Text>
           <div>
-            <Button variant="bezeledGray" size="sm">
+            <Button variant={preview === 'wallet' ? 'bezeledGray' : 'borderless'} size="sm" onClick={() => setPreview('wallet')}>
               Billetera
+            </Button>
+          </div>
+          <div>
+            <Button variant={preview === 'pos' ? 'bezeledGray' : 'borderless'} size="sm" onClick={() => setPreview('pos')}>
+              Pos
             </Button>
           </div>
           <div>
@@ -35,7 +43,8 @@ export default () => {
       <Divider y={24} />
       <Flex justify="center">
         <Preview screen="md">
-          <DashboardPreview />
+          {preview === 'wallet' && <DashboardPreview />}
+          {preview === 'pos' && <PosPreview />}
         </Preview>
       </Flex>
     </Flex>

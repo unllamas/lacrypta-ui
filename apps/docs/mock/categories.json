@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "name": "Tragos"
+  },
+  {
+    "id": 2,
+    "name": "Cerveza"
+  },
+  {
+    "id": 3,
+    "name": "Gaseosas"
+  },
+  {
+    "id": 4,
+    "name": "Comida"
+  },
+  {
+    "id": 5,
+    "name": "Merch"
+  },
+  {
+    "id": 6,
+    "name": "Empanadas"
+  },
+  {
+    "id": 7,
+    "name": "Entretenimiento"
+  }
+]

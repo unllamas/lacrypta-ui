@@ -387,7 +387,7 @@ export const DashboardPreview = () => {
         {sheetStep === 'finished' && (
           <>
             <Flex direction="column" justify="center" align="center" gap="sm">
-              <Icon icon={<Check color={appTheme.colors.primary[400]} />} />
+              <Icon icon={<Check color={appTheme.colors.success[400]} />} />
               <Text isBold align="center">
                 Pago recibido!
               </Text>
