@@ -78,7 +78,7 @@ export const PosPreview = () => {
       if (!_groupedProducts[categoryId]) {
         _groupedProducts[categoryId] = [];
       }
-      _groupedProducts[categoryId].push(product);
+      _groupedProducts[categoryId]!.push(product);
     });
 
     setGroupedProducts(_groupedProducts);
