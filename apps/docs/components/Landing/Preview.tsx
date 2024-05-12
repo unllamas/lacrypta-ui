@@ -1,16 +1,12 @@
 import { appTheme } from '@/config/theme';
 
-const genericPreview = {
+const boxPreview = {
   overflow: 'hidden',
   width: '100%',
   maxHeight: '668px',
   margin: '0 auto',
-  padding: '24px',
+  paddingTop: '24px',
   backgroundColor: appTheme.colors.background,
-  borderRadius: '24px 24px 0 0',
-  border: `1px solid ${appTheme.colors.gray[800]}`,
-  borderBottom: '0px',
-  boxShadow: `0 -48px 64px rgba(255,255,255,.02)`,
 };
 
 interface PreviewProps {
@@ -34,8 +30,18 @@ export const Preview = ({ children, screen = 'md' }: PreviewProps) => {
   }
 
   return (
-    <div style={{ width: '100%', maxWidth: device }}>
-      <div style={genericPreview}>{children}</div>
+    <div
+      style={{
+        position: 'relative',
+        overflow: 'hidden',
+        width: '100%',
+        maxWidth: device,
+        borderRadius: '16px 16px 0 0',
+        border: `1px solid ${appTheme.colors.gray[800]}`,
+        borderBottom: '0',
+      }}
+    >
+      <div style={boxPreview}>{children}</div>
     </div>
   );
 };
