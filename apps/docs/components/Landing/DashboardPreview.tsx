@@ -20,6 +20,7 @@ import {
   Satoshi,
   Check,
 } from '@unllamas/lacrypta-ui';
+import confetti from 'canvas-confetti';
 
 // LaWallet
 import { NostrProvider, useZap } from '@lawallet/react';
@@ -41,7 +42,7 @@ export const DashboardPreview = () => {
   // const [message, setMessage] = useState('');
   const [sheetStep, setSheetStep] = useState<SheetTypes>('amount');
 
-  const handleCreateZap = async () => {
+  const handleCreateZap = () => {
     if (invoice.loading) return;
     createZapInvoice(amount).then((bolt11: string | undefined) => {
       if (!bolt11) {
@@ -60,7 +61,10 @@ export const DashboardPreview = () => {
   };
 
   useEffect(() => {
-    if (invoice.payed) setSheetStep('finished');
+    if (invoice.payed) {
+      setSheetStep('finished');
+      confetti({});
+    }
   }, [invoice.payed]);
 
   return (
@@ -286,7 +290,7 @@ export const DashboardPreview = () => {
       <Drawer
         isOpen={isOpen}
         onClose={handleCloseDrawer}
-        title="Crear factura"
+        title="Generando deposito"
         closeText="Cerrar"
       >
         {sheetStep === 'amount' && (
