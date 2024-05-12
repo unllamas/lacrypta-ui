@@ -9,6 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@lawallet/react": "^0.1.57",
     "@unllamas/lacrypta-ui": "workspace:*",
     "next": "^14.1.1",
     "nextra": "^2.13.4",
