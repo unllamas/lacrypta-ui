@@ -23,30 +23,22 @@ import { Flex } from '@unllamas/lacrypta-ui';
 <br />
 
 <Card variant="outline" spacing={4}>
-  <Container size="sm">
-    <Flex>
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
-      </Text>
-      <Button>Button</Button>
-    </Flex>
-  </Container>
+  <Flex>
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Flex>
 </Card>
 
 ```js copy
 <Flex>
-  <Text>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua
-  </Text>
+  <Button>Button</Button>
   <Button>Button</Button>
 </Flex>
 ```
 
 ### Flex Gap
 
-The gap property receives `xs`, `sm` or `md` as a value
+The `gap` property receives `xs`, `sm` or `md`
 
 <Callout type="warning">
   Los valores `0`, `2`, `4`, `8` y `16` serán deprecados.
@@ -55,100 +47,74 @@ The gap property receives `xs`, `sm` or `md` as a value
 <br />
 
 <Card variant="outline" spacing={4}>
-  <Container size="sm">
-    <Flex gap="md">
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
-      </Text>
-      <Button>Button</Button>
-    </Flex>
-  </Container>
+  <Flex gap="md">
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Flex>
 </Card>
 
-```js copy
+```js copy /gap/
 <Flex gap="md">
-  <Text>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua
-  </Text>
   <Button>Button</Button>
-</Flex>
-```
-
-### Flex Direction
-
-The direction property receives `row` or `column` as a value
-
-<br />
-
-<Card variant="outline" spacing={4}>
-  <Container size="sm">
-    <Flex gap="md" direction="column">
-      <Text>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua
-      </Text>
-      <Button>Button</Button>
-    </Flex>
-  </Container>
-</Card>
-
-```js copy
-<Flex gap="md" direction="column">
-  <Text>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua
-  </Text>
-  <Button>Button</Button>
-</Flex>
-```
-
-### Flex Align
-
-The align property receives `start`, `end` or `center`
-
-<br />
-
-<Card variant="outline" spacing={4}>
-  <Container size="sm">
-    <Flex gap="md" direction="column" align="center">
-      <Text align="center">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et.
-      </Text>
-      <Button>Button</Button>
-    </Flex>
-  </Container>
-</Card>
-
-```js copy
-<Flex gap="md" direction="column" align="center">
-  <Text align="center">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et.
-  </Text>
   <Button>Button</Button>
 </Flex>
 ```
 
 ### Flex Justify
 
-The justify property receives `start`, `end`, `center` or `space-between`
+The `justify` property receives `start`, `end`, `center` or `space-between`
 
 <br />
 
 <Card variant="outline" spacing={4}>
-  <Container size="sm">
-    <Flex gap="md" justify="center">
-      <Button>Button</Button>
-      <Button>Button</Button>
-    </Flex>
-  </Container>
+  <Flex gap="md" justify="center">
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Flex>
 </Card>
 
-```js copy
-<Flex gap="md" justify="center">
+```js copy /justify/
+<Flex ... justify="center">
+  <Button>Button</Button>
+  <Button>Button</Button>
+</Flex>
+```
+
+### Flex Direction
+
+The `direction` property receives `row` or `column`
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Flex gap="md" direction="column">
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Flex>
+</Card>
+
+```js copy /direction/
+<Flex ... direction="column">
+  <Button>Button</Button>
+  <Button>Button</Button>
+</Flex>
+```
+
+### Flex Align
+
+The `align` property receives `start`, `end` or `center`
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Flex gap="md" direction="column" align="center">
+    <Button>Button</Button>
+    <Button>Button</Button>
+  </Flex>
+</Card>
+
+```js copy /align/
+<Flex ... align="center">
   <Button>Button</Button>
   <Button>Button</Button>
 </Flex>

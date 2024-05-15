@@ -17,9 +17,12 @@
   },
   "avatar": "Avatar",
   "button": "Button",
+  "card": "Card",
+  "divider": "Divider",
   "drawer": "Drawer",
   "flex": "Flex",
   "heading": "Heading",
   "input": "Input",
+  "text": "Text",
   "textarea": "Textarea"
 }

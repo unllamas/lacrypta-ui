@@ -1,0 +1,49 @@
+import { Callout } from 'nextra/components';
+import { Flex, Card, Container, Divider, Heading, Text, Input, Button } from '@unllamas/lacrypta-ui';
+
+# Divider
+
+Dividers are used to visually separate content in a list or group.
+
+## Import
+
+```js copy
+import { Divider } from '@unllamas/lacrypta-ui';
+```
+
+## Usage
+
+The Divider displays a thin horizontal or vertical line, and renders an hr tag.
+
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Button variant='bezeledGray'>Cancel</Button>
+  <Divider />
+  <Button variant='bezeledGray'>Deploy</Button>
+</Card>
+
+```js copy {2}
+<Button variant='bezeledGray'>Cancel</Button>
+<Divider />
+<Button variant='bezeledGray'>Deploy</Button>
+```
+
+### Divider Y
+
+The `y` property receives `xs`, `sm` or `md`
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Button variant='bezeledGray'>Cancel</Button>
+  <Divider y='xs' />
+  <Button variant='bezeledGray'>Deploy</Button>
+</Card>
+
+```js copy /y=/
+<Button variant='bezeledGray'>Cancel</Button>
+<Divider y='xs' />
+<Button variant='bezeledGray'>Deploy</Button>
+```

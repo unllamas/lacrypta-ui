@@ -33,7 +33,7 @@ import { Text } from '@unllamas/lacrypta-ui';
 
 ### Text Size
 
-To increase the visual size of the heading, use the `size` props. This property ensures that the heading size automatically adjusts for smaller screens.
+The `size` property receives `xs`, `sm`, `md` or `lg` value
 
 <Callout type="warning">Deprecados los valores `small` y `normal`</Callout>
 
@@ -41,13 +41,15 @@ To increase the visual size of the heading, use the `size` props. This property 
 
 <Card variant="outline" spacing={4}>
   <Flex direction="column" gap={16}>
+    <Text size="lg">(lg) In love with React & Next</Text>
     <Text size="md">(md) In love with React & Next</Text>
     <Text size="sm">(sm) In love with React & Next</Text>
     <Text size="xs">(xs) In love with React & Next</Text>
   </Flex>
 </Card>
 
-```js copy
+```js copy /size/
+<Text size='lg'>(lg) In love with React & Next</Text>
 <Text size='md'>(md) In love with React & Next</Text>
 <Text size='sm'>(sm) In love with React & Next</Text>
 <Text size='xs'>(xs) In love with React & Next</Text>
@@ -55,7 +57,7 @@ To increase the visual size of the heading, use the `size` props. This property 
 
 ### Text Align
 
-The align property receives `left`, `center` or `right` value
+The `align` property receives `left`, `center` or `right` value
 
 <br />
 
@@ -65,7 +67,7 @@ The align property receives `left`, `center` or `right` value
   <Text align="right">In love with React & Next</Text>
 </Card>
 
-```js copy
+```js copy /align/
 <Text align='left'>In love with React & Next</Text>
 <Text align='center'>In love with React & Next</Text>
 <Text align='right'>In love with React & Next</Text>
@@ -73,7 +75,7 @@ The align property receives `left`, `center` or `right` value
 
 ### Text Color
 
-The color property receives a hexadecimal color
+The `color` property receives a `hexadecimal` value
 
 <br />
 
@@ -81,50 +83,6 @@ The color property receives a hexadecimal color
   <Text color="yellow">In love with React & Next</Text>
 </Card>
 
-```js copy
+```js copy /color/
 <Text color="yellow">In love with React & Next</Text>
-```
-
-### Override the element
-
-<Callout type="error">Falta implementar</Callout>
-
-To override the element that gets rendered, pass the as prop. Use Inspect Element to see the element that gets rendered in html.
-
-<br />
-
-<Card variant="outline" spacing={4}>
-  <Flex direction="column" gap={16}>
-    <Text isBold>Bold</Text>
-    <Text as="i">Italic</Text>
-    <Text as="u">Underline</Text>
-    <Text as="abbr">I18N</Text>
-    <Text as="cite">Citation</Text>
-    <Text as="del">Deleted</Text>
-    <Text as="em">Emphasis</Text>
-    <Text as="ins">Inserted</Text>
-    <Text as="kbd">Ctrl + C</Text>
-    <Text as="mark">Highlighted</Text>
-    <Text as="s">Strikethrough</Text>
-    <Text as="samp">Sample</Text>
-    <Text as="sub">sub</Text>
-    <Text as="sup">sup</Text>
-  </Flex>
-</Card>
-
-```js copy
-<Text isBold>Bold</Text>
-<Text as='i'>Italic</Text>
-<Text as='u'>Underline</Text>
-<Text as='abbr'>I18N</Text>
-<Text as='cite'>Citation</Text>
-<Text as='del'>Deleted</Text>
-<Text as='em'>Emphasis</Text>
-<Text as='ins'>Inserted</Text>
-<Text as='kbd'>Ctrl + C</Text>
-<Text as='mark'>Highlighted</Text>
-<Text as='s'>Strikethrough</Text>
-<Text as='samp'>Sample</Text>
-<Text as='sub'>sub</Text>
-<Text as='sup'>sup</Text>
 ```

@@ -39,7 +39,7 @@ export function PreviewDrawer({ children }) {
   <PreviewDrawer>Open Drawer</PreviewDrawer>
 </Card>
 
-```js copy showLineNumbers {4,8,9,11} /useDisclosure/ 
+```js copy showLineNumbers {4,8,9,11}
 import { useDisclosure, Drawer, Button } from '@unllamas/lacrypta-ui';
 
 export const Preview = () => {
@@ -54,6 +54,42 @@ export const Preview = () => {
     </>
   );
 }
+```
+
+### Custom title
+
+<br />
+
+export function PreviewCustomTitle({ children }) {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  return (
+    <Flex align='center' justify='center' style={{ minHeight: '668px' }}>
+      <div>
+        <Button onClick={onOpen}>Open Drawer</Button>
+      </div>
+      <Drawer isOpen={isOpen} onClose={onClose} title='Testeando el titulo'>
+        <Input label="Email" placeholder="you@example.com" />
+        <Divider y="sm" />
+        <Flex gap="sm">
+          <Button isBlock variant="bezeledGray" onClick={onClose}>
+            Cancelar
+          </Button>
+          <Button isBlock>Guardar</Button>
+        </Flex>
+      </Drawer>
+    </Flex>
+  )
+}
+
+<Card variant="outline" spacing={4}>
+  <PreviewCustomTitle>Open Drawer</PreviewCustomTitle>
+</Card>
+
+```js /title/
+  <Drawer ... title={'Testeando el titulo'}>
+    ...
+  </Drawer>
 ```
 
 ### Custom close button
@@ -86,20 +122,10 @@ export function PreviewCustomClose({ children }) {
   <PreviewCustomClose>Open Drawer</PreviewCustomClose>
 </Card>
 
-```js {1,9} showLineNumbers /Cancel/
-import { useDisclosure, Drawer, Button, Cancel } from '@unllamas/lacrypta-ui';
+```js /closeText/
+import { Cancel } from '@unllamas/lacrypta-ui'
 
-export const Preview = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  return (
-    <>
-      <Button onClick={onOpen}>Open Drawer</Button>
-      <Drawer ... closeText={<Cancel />}>
-        ...
-      </Drawer>
-    </>
-  );
-}
-
+<Drawer ... closeText={<Cancel />}>
+  ...
+</Drawer>
 ```

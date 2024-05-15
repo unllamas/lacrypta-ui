@@ -1,0 +1,109 @@
+import { Callout } from 'nextra/components';
+import { Flex, Card, Container, Divider, Heading, Text, Input, Button } from '@unllamas/lacrypta-ui';
+
+# Card
+
+
+## Import
+
+```js copy
+import { Card } from '@unllamas/lacrypta-ui';
+```
+
+## Usage
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Container size='sm'>
+    <Card>
+      <Heading as='h3'>Create project</Heading>
+      <Text size='sm'>Deploy your new project in one-click.</Text>
+      <Divider />
+      <Input label='Name' placeholder='Name of your proyect' />
+      <Divider y='sm' />
+      <Input label='Framework' placeholder='Framework' />
+      <Divider />
+      <Flex gap='md'>
+        <Button isBlock variant='borderless'>Cancel</Button>
+        <Button isBlock variant='bezeled'>Deploy</Button>
+      </Flex>
+    </Card>
+  </Container>
+</Card>
+
+```js copy
+<Card>
+  <Heading as='h3'>Create project</Heading>
+  <Text size='sm'>Deploy your new project in one-click.</Text>
+  <Divider />
+  <Input label='Name' placeholder='Name of your proyect' />
+  <Divider y='sm' />
+  <Input label='Framework' placeholder='Framework' />
+  <Divider />
+  <Flex gap='md'>
+    <Button isBlock variant='borderless'>Cancel</Button>
+    <Button isBlock variant='bezeled'>Deploy</Button>
+  </Flex>
+</Card>
+```
+
+### Card Variant
+
+The `variant` property receives `default`, `outline` or `filled`
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Container size='sm'>
+    <Card variant='filled'>
+      <Heading as='h3'>Create project</Heading>
+      <Text size='sm'>Deploy your new project in one-click.</Text>
+      <Divider />
+      <Input label='Name' placeholder='Name of your proyect' />
+      <Divider y='sm' />
+      <Input label='Framework' placeholder='Framework' />
+      <Divider />
+      <Flex gap='md'>
+        <Button isBlock variant='borderless'>Cancel</Button>
+        <Button isBlock variant='bezeled'>Deploy</Button>
+      </Flex>
+    </Card>
+  </Container>
+</Card>
+
+```js copy /variant/
+<Card variant='filled'>
+  ...
+</Card>
+```
+
+### Card spacing
+
+The `spacing` property receives `default`, `xs`, `sm`, `md` or `lg`
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Container size='sm'>
+    <Card variant='filled' spacing='lg'>
+      <Heading as='h3'>Create project</Heading>
+      <Text size='sm'>Deploy your new project in one-click.</Text>
+      <Divider />
+      <Input label='Name' placeholder='Name of your proyect' />
+      <Divider y='sm' />
+      <Input label='Framework' placeholder='Framework' />
+      <Divider />
+      <Flex gap='md'>
+        <Button isBlock variant='borderless'>Cancel</Button>
+        <Button isBlock variant='bezeled'>Deploy</Button>
+      </Flex>
+    </Card>
+  </Container>
+</Card>
+
+```js copy /spacing/
+<Card spacing='lg'>
+  ...
+</Card>
+```
