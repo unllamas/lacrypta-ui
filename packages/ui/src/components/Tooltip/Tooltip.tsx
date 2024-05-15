@@ -1,8 +1,9 @@
 import { ReactNode, useEffect } from 'react';
-import { Text } from 'components/Text';
+
+import { Text } from '../Text';
 
 import { TooltipStyle } from './style';
-import { useDisclosure } from 'hooks';
+import { useDisclosure } from '../../hooks';
 
 interface TooltipProps {
   children: ReactNode;
