@@ -12,7 +12,7 @@ interface AvatarProps {
 }
 
 export const Avatar: FC<AvatarProps> = (props) => {
-  const { src, alt = '', size = 'sm', children, name } = props;
+  const { src, alt = '', size = 'md', children, name } = props;
 
   let sizeValue: number = 0;
 
