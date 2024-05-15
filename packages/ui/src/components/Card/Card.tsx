@@ -5,21 +5,22 @@ import { CardStyle } from './style';
 
 interface CardProps {
   children: ReactNode;
-  spacing?: number;
-  variant?: 'unstyled' | 'filled' | 'outline';
+  spacing?: 'xs' | 'sm' | 'md' | 'lg' | 'default';
+  variant?: 'default' | 'filled' | 'outline';
 }
 
 export function Card(props: CardProps) {
-  const { children, spacing = 0, variant = 'unstyled' } = props;
+  const { children, spacing = 'md', variant = 'outline' } = props;
   const theme = useTheme();
 
   let background;
   let border;
+  let padding;
 
   switch (variant) {
     case 'filled':
-      background = theme.colors.gray[800];
-      border = theme.colors.gray[800];
+      background = theme.colors.gray[900];
+      border = theme.colors.gray[900];
       break;
     case 'outline':
       background = 'transparent';
@@ -31,8 +32,29 @@ export function Card(props: CardProps) {
       break;
   }
 
+  switch (spacing) {
+    case 'xs':
+      padding = '8px';
+      break;
+    case 'sm':
+      padding = '16px';
+      break;
+    case 'md':
+      padding = '24px';
+      break;
+    case 'lg':
+      padding = '32px';
+      break;
+    case 'default':
+      padding = '0px';
+      break;
+    default:
+      padding = '24px';
+      break;
+  }
+
   return (
-    <CardStyle $spacing={spacing} $background={background} $border={border}>
+    <CardStyle $padding={padding} $background={background} $border={border}>
       {children}
     </CardStyle>
   );

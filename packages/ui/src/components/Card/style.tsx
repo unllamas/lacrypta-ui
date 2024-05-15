@@ -3,7 +3,7 @@ import { styled } from 'styled-components';
 const slot = 4;
 
 export const CardStyle = styled.div<{
-  $spacing: number;
+  $padding: string;
   $background: string;
   $border: string;
 }>`
@@ -14,7 +14,7 @@ export const CardStyle = styled.div<{
   flex-direction: column;
   width: 100%;
 
-  padding: ${(props) => props.$spacing * slot}px;
+  padding: ${(props) => props.$padding};
 
   background-color: ${(props) => props.$background};
   border: 1px solid ${(props) => props.$border};
