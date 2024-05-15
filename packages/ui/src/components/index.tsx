@@ -10,6 +10,7 @@ export { Icon } from './Icon';
 export * from './Icons';
 export * from './Drawer';
 export * from './QRCode';
+export * from './Tooltip';
 
 // Inputs
 export * from './Input';
