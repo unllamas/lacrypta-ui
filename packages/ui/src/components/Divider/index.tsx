@@ -6,7 +6,7 @@ interface DividerProps {
 }
 
 export function Divider(props: DividerProps): JSX.Element {
-  const { y = 'none' } = props;
+  const { y = 'md' } = props;
 
   let spacing;
 
