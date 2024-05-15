@@ -26,6 +26,8 @@ interface BaseButtonProps {
 }
 
 export const ButtonStyle = styled.button<BaseButtonProps>`
+  position: relative;
+
   display: inline-flex;
   align-items: center;
   justify-content: center;
