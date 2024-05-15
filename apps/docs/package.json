@@ -9,7 +9,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@lawallet/react": "^0.1.57",
+    "@lawallet/react": "^0.1.59",
     "@unllamas/lacrypta-ui": "workspace:*",
     "canvas-confetti": "^1.9.3",
     "next": "^14.1.1",
