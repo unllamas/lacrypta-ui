@@ -11,7 +11,7 @@ interface TooltipProps {
   // TO-DO
   placement?: string;
   isOpen?: boolean;
-  color: 'default' | 'primary' | 'secondary' | 'error';
+  color?: 'default' | 'primary' | 'secondary' | 'error';
 }
 
 export const Tooltip = (props: TooltipProps) => {
