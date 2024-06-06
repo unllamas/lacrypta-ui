@@ -5,8 +5,9 @@ const boxPreview = {
   width: '100%',
   maxHeight: '668px',
   margin: '0 auto',
-  paddingTop: '24px',
+  // paddingTop: '24px',
   backgroundColor: appTheme.colors.background,
+  borderRadius: '16px 16px 0 0',
 };
 
 interface PreviewProps {
@@ -36,6 +37,8 @@ export const Preview = ({ children, screen = 'md' }: PreviewProps) => {
         overflow: 'hidden',
         width: '100%',
         maxWidth: device,
+        padding: '24px',
+        paddingBottom: 0,
         borderRadius: '16px 16px 0 0',
         border: `1px solid ${appTheme.colors.gray[800]}`,
         borderBottom: '0',
