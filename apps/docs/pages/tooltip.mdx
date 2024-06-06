@@ -1,0 +1,37 @@
+import { Callout } from 'nextra/components';
+import {
+  Heading,
+  Card,
+  Text,
+  Button,
+  Container,
+  Divider,
+  Tooltip,
+  Flex
+} from '@unllamas/lacrypta-ui';
+
+# Tooltip
+
+The Textarea component allows you to easily create multi-line text inputs.
+
+## Import
+
+```js copy
+import { Tooltip } from '@unllamas/lacrypta-ui';
+```
+
+## Usage
+
+<br />
+
+<Card variant="outline" spacing={4}>
+  <Flex align='center' justify='center' style={{minHeight: '200px'}}>
+  <Tooltip label='hola!'>
+    <Button>Click me!</Button>
+  </Tooltip>
+  </Flex>
+</Card>
+
+```js copy
+<Textarea placeholder='Here is a sample placeholder' />
+```
